@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		8D91B8EEACF53773C9FEED82 /* Pods_blog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1779A4D2ADD1EDB9A4142437 /* Pods_blog.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D01770D11BA12EFD003BA551 /* NetQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = D01770D01BA12EFD003BA551 /* NetQuery.m */; };
+		D01770D61BA177E6003BA551 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01770D51BA177E6003BA551 /* LoginViewController.m */; };
 		D067C9571BA006D200048D8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9561BA006D200048D8B /* main.m */; };
 		D067C95A1BA006D200048D8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9591BA006D200048D8B /* AppDelegate.m */; };
 		D067C9631BA006D200048D8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D067C9611BA006D200048D8B /* Main.storyboard */; };
 		D067C9651BA006D200048D8B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D067C9641BA006D200048D8B /* Images.xcassets */; };
 		D067C9681BA006D200048D8B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D067C9661BA006D200048D8B /* LaunchScreen.xib */; };
-		D067C9741BA006D200048D8B /* blogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9731BA006D200048D8B /* blogTests.m */; };
+		D067C9741BA006D200048D8B /* BlogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9731BA006D200048D8B /* BlogTests.m */; };
 		D067C9851BA007A100048D8B /* BlogListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9821BA007A100048D8B /* BlogListViewController.m */; };
 		D067C9861BA007A100048D8B /* BlogPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9841BA007A100048D8B /* BlogPostViewController.m */; };
 /* End PBXBuildFile section */
@@ -31,6 +33,11 @@
 /* Begin PBXFileReference section */
 		1779A4D2ADD1EDB9A4142437 /* Pods_blog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		761514F581689EBD3C611AEA /* Pods-blog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blog.release.xcconfig"; path = "Pods/Target Support Files/Pods-blog/Pods-blog.release.xcconfig"; sourceTree = "<group>"; };
+		D01770CF1BA12EFD003BA551 /* NetQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetQuery.h; sourceTree = "<group>"; };
+		D01770D01BA12EFD003BA551 /* NetQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetQuery.m; sourceTree = "<group>"; };
+		D01770D31BA1556B003BA551 /* NetQueryDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetQueryDelegate.h; sourceTree = "<group>"; };
+		D01770D41BA177E6003BA551 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		D01770D51BA177E6003BA551 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		D067C9511BA006D200048D8B /* blog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067C9551BA006D200048D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D067C9561BA006D200048D8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -39,9 +46,9 @@
 		D067C9621BA006D200048D8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D067C9641BA006D200048D8B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D067C9671BA006D200048D8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		D067C96D1BA006D200048D8B /* blogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = blogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D067C96D1BA006D200048D8B /* BlogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067C9721BA006D200048D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D067C9731BA006D200048D8B /* blogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blogTests.m; sourceTree = "<group>"; };
+		D067C9731BA006D200048D8B /* BlogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogTests.m; sourceTree = "<group>"; };
 		D067C9811BA007A100048D8B /* BlogListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogListViewController.h; sourceTree = "<group>"; };
 		D067C9821BA007A100048D8B /* BlogListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogListViewController.m; sourceTree = "<group>"; };
 		D067C9831BA007A100048D8B /* BlogPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPostViewController.h; sourceTree = "<group>"; };
@@ -88,6 +95,9 @@
 		D01770CC1BA122F6003BA551 /* Net */ = {
 			isa = PBXGroup;
 			children = (
+				D01770CF1BA12EFD003BA551 /* NetQuery.h */,
+				D01770D01BA12EFD003BA551 /* NetQuery.m */,
+				D01770D31BA1556B003BA551 /* NetQueryDelegate.h */,
 			);
 			path = Net;
 			sourceTree = "<group>";
@@ -95,8 +105,8 @@
 		D067C9481BA006D200048D8B = {
 			isa = PBXGroup;
 			children = (
-				D067C9531BA006D200048D8B /* blog */,
-				D067C9701BA006D200048D8B /* blogTests */,
+				D067C9531BA006D200048D8B /* Blog */,
+				D067C9701BA006D200048D8B /* BlogTests */,
 				D067C9521BA006D200048D8B /* Products */,
 				B6844651B1D3C22902206D55 /* Pods */,
 				2894643F082D1DD3E6120DB7 /* Frameworks */,
@@ -107,12 +117,12 @@
 			isa = PBXGroup;
 			children = (
 				D067C9511BA006D200048D8B /* blog.app */,
-				D067C96D1BA006D200048D8B /* blogTests.xctest */,
+				D067C96D1BA006D200048D8B /* BlogTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D067C9531BA006D200048D8B /* blog */ = {
+		D067C9531BA006D200048D8B /* Blog */ = {
 			isa = PBXGroup;
 			children = (
 				D067C97E1BA0074300048D8B /* Models */,
@@ -126,7 +136,7 @@
 				D067C9661BA006D200048D8B /* LaunchScreen.xib */,
 				D067C9541BA006D200048D8B /* Supporting Files */,
 			);
-			path = blog;
+			path = Blog;
 			sourceTree = "<group>";
 		};
 		D067C9541BA006D200048D8B /* Supporting Files */ = {
@@ -138,12 +148,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D067C9701BA006D200048D8B /* blogTests */ = {
+		D067C9701BA006D200048D8B /* BlogTests */ = {
 			isa = PBXGroup;
 			children = (
-				D067C9731BA006D200048D8B /* blogTests.m */,
+				D067C9731BA006D200048D8B /* BlogTests.m */,
 				D067C9711BA006D200048D8B /* Supporting Files */,
 			);
+			name = BlogTests;
 			path = blogTests;
 			sourceTree = "<group>";
 		};
@@ -162,6 +173,8 @@
 				D067C9821BA007A100048D8B /* BlogListViewController.m */,
 				D067C9831BA007A100048D8B /* BlogPostViewController.h */,
 				D067C9841BA007A100048D8B /* BlogPostViewController.m */,
+				D01770D41BA177E6003BA551 /* LoginViewController.h */,
+				D01770D51BA177E6003BA551 /* LoginViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,9 +204,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D067C9501BA006D200048D8B /* blog */ = {
+		D067C9501BA006D200048D8B /* Blog */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D067C9771BA006D200048D8B /* Build configuration list for PBXNativeTarget "blog" */;
+			buildConfigurationList = D067C9771BA006D200048D8B /* Build configuration list for PBXNativeTarget "Blog" */;
 			buildPhases = (
 				9CCD62A94BF1F7195423EB6E /* Check Pods Manifest.lock */,
 				D067C94D1BA006D200048D8B /* Sources */,
@@ -206,14 +219,14 @@
 			);
 			dependencies = (
 			);
-			name = blog;
+			name = Blog;
 			productName = blog;
 			productReference = D067C9511BA006D200048D8B /* blog.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D067C96C1BA006D200048D8B /* blogTests */ = {
+		D067C96C1BA006D200048D8B /* BlogTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D067C97A1BA006D200048D8B /* Build configuration list for PBXNativeTarget "blogTests" */;
+			buildConfigurationList = D067C97A1BA006D200048D8B /* Build configuration list for PBXNativeTarget "BlogTests" */;
 			buildPhases = (
 				D067C9691BA006D200048D8B /* Sources */,
 				D067C96A1BA006D200048D8B /* Frameworks */,
@@ -224,9 +237,9 @@
 			dependencies = (
 				D067C96F1BA006D200048D8B /* PBXTargetDependency */,
 			);
-			name = blogTests;
-			productName = blogTests;
-			productReference = D067C96D1BA006D200048D8B /* blogTests.xctest */;
+			name = BlogTests;
+			productName = BlogTests;
+			productReference = D067C96D1BA006D200048D8B /* BlogTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -240,6 +253,7 @@
 				TargetAttributes = {
 					D067C9501BA006D200048D8B = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = D83RW2P9K5;
 					};
 					D067C96C1BA006D200048D8B = {
 						CreatedOnToolsVersion = 6.4;
@@ -247,7 +261,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D067C94C1BA006D200048D8B /* Build configuration list for PBXProject "blog" */;
+			buildConfigurationList = D067C94C1BA006D200048D8B /* Build configuration list for PBXProject "Blog" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -260,8 +274,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D067C9501BA006D200048D8B /* blog */,
-				D067C96C1BA006D200048D8B /* blogTests */,
+				D067C9501BA006D200048D8B /* Blog */,
+				D067C96C1BA006D200048D8B /* BlogTests */,
 			);
 		};
 /* End PBXProject section */
@@ -341,7 +355,9 @@
 			files = (
 				D067C9861BA007A100048D8B /* BlogPostViewController.m in Sources */,
 				D067C95A1BA006D200048D8B /* AppDelegate.m in Sources */,
+				D01770D61BA177E6003BA551 /* LoginViewController.m in Sources */,
 				D067C9851BA007A100048D8B /* BlogListViewController.m in Sources */,
+				D01770D11BA12EFD003BA551 /* NetQuery.m in Sources */,
 				D067C9571BA006D200048D8B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,7 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D067C9741BA006D200048D8B /* blogTests.m in Sources */,
+				D067C9741BA006D200048D8B /* BlogTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +375,7 @@
 /* Begin PBXTargetDependency section */
 		D067C96F1BA006D200048D8B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D067C9501BA006D200048D8B /* blog */;
+			target = D067C9501BA006D200048D8B /* Blog */;
 			targetProxy = D067C96E1BA006D200048D8B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -470,10 +486,11 @@
 			baseConfigurationReference = E15670437B00B1B771FE2B1D /* Pods-blog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = blog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = blog;
 			};
 			name = Debug;
 		};
@@ -482,10 +499,11 @@
 			baseConfigurationReference = 761514F581689EBD3C611AEA /* Pods-blog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = blog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = blog;
 			};
 			name = Release;
 		};
@@ -501,9 +519,9 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = blogTests/Info.plist;
+				INFOPLIST_FILE = BlogTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BlogTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/blog.app/blog";
 			};
 			name = Debug;
@@ -516,9 +534,9 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = blogTests/Info.plist;
+				INFOPLIST_FILE = BlogTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BlogTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/blog.app/blog";
 			};
 			name = Release;
@@ -526,7 +544,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D067C94C1BA006D200048D8B /* Build configuration list for PBXProject "blog" */ = {
+		D067C94C1BA006D200048D8B /* Build configuration list for PBXProject "Blog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D067C9751BA006D200048D8B /* Debug */,
@@ -535,7 +553,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D067C9771BA006D200048D8B /* Build configuration list for PBXNativeTarget "blog" */ = {
+		D067C9771BA006D200048D8B /* Build configuration list for PBXNativeTarget "Blog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D067C9781BA006D200048D8B /* Debug */,
@@ -544,7 +562,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D067C97A1BA006D200048D8B /* Build configuration list for PBXNativeTarget "blogTests" */ = {
+		D067C97A1BA006D200048D8B /* Build configuration list for PBXNativeTarget "BlogTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D067C97B1BA006D200048D8B /* Debug */,

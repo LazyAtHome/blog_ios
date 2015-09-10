@@ -7,8 +7,9 @@
 //
 
 #import "BlogListViewController.h"
+#import "NetQuery.h"
 
-@interface BlogListViewController ()
+@interface BlogListViewController ()<NetQueryDelegate>
 
 @end
 
@@ -22,6 +23,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)onSucceed:(NSDictionary*)response{
+    NSLog(@"JSON: %@", response);
+    
+}
+
+- (void)onFailed:(int)status errorMsg:(NSString*)errorMsg{
+    NSLog(@"Error: %d, %@", status, errorMsg);
 }
 
 @end
