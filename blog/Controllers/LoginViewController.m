@@ -8,6 +8,14 @@
 
 #import "LoginViewController.h"
 
+@interface LoginViewController () {
+    
+    IBOutlet UITextField* _textAccount;
+    
+    IBOutlet UITextField* _textPassword;
+}
+
+@end
 @implementation LoginViewController
 
 @end

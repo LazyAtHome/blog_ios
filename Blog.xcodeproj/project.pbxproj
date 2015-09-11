@@ -22,6 +22,8 @@
 		D0B3DCE21BA2AC070056F0D9 /* BlogListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCE11BA2AC070056F0D9 /* BlogListViewController.xib */; };
 		D0B3DCE41BA2AC3D0056F0D9 /* BlogPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCE31BA2AC3D0056F0D9 /* BlogPostViewController.xib */; };
 		D0B3DCE71BA2AF0F0056F0D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCE91BA2AF0F0056F0D9 /* Localizable.strings */; };
+		D0B3DCF11BA2B3030056F0D9 /* BlogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B3DCEF1BA2B3030056F0D9 /* BlogTableViewCell.m */; };
+		D0B3DCF21BA2B3030056F0D9 /* BlogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCF01BA2B3030056F0D9 /* BlogTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,9 @@
 		D0B3DCEB1BA2B08B0056F0D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		D0B3DCEC1BA2B08B0056F0D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		D0B3DCED1BA2B08B0056F0D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D0B3DCEE1BA2B3030056F0D9 /* BlogTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogTableViewCell.h; sourceTree = "<group>"; };
+		D0B3DCEF1BA2B3030056F0D9 /* BlogTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogTableViewCell.m; sourceTree = "<group>"; };
+		D0B3DCF01BA2B3030056F0D9 /* BlogTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogTableViewCell.xib; sourceTree = "<group>"; };
 		E15670437B00B1B771FE2B1D /* Pods-blog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-blog/Pods-blog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -213,6 +218,9 @@
 			isa = PBXGroup;
 			children = (
 				D067C9611BA006D200048D8B /* Main.storyboard */,
+				D0B3DCEE1BA2B3030056F0D9 /* BlogTableViewCell.h */,
+				D0B3DCEF1BA2B3030056F0D9 /* BlogTableViewCell.m */,
+				D0B3DCF01BA2B3030056F0D9 /* BlogTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,6 +315,7 @@
 				D067C9631BA006D200048D8B /* Main.storyboard in Resources */,
 				D0B3DCE21BA2AC070056F0D9 /* BlogListViewController.xib in Resources */,
 				D067C9681BA006D200048D8B /* LaunchScreen.xib in Resources */,
+				D0B3DCF21BA2B3030056F0D9 /* BlogTableViewCell.xib in Resources */,
 				D067C9651BA006D200048D8B /* Images.xcassets in Resources */,
 				D0B3DCE71BA2AF0F0056F0D9 /* Localizable.strings in Resources */,
 			);
@@ -379,6 +388,7 @@
 				D01770D61BA177E6003BA551 /* LoginViewController.m in Sources */,
 				D067C9851BA007A100048D8B /* BlogListViewController.m in Sources */,
 				D01770D11BA12EFD003BA551 /* NetQuery.m in Sources */,
+				D0B3DCF11BA2B3030056F0D9 /* BlogTableViewCell.m in Sources */,
 				D067C9571BA006D200048D8B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

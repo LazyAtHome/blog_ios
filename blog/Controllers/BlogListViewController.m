@@ -7,9 +7,13 @@
 //
 
 #import "BlogListViewController.h"
+#import "BlogTableViewCell.h"
 #import "NetQuery.h"
 
-@interface BlogListViewController ()<NetQueryDelegate>
+@interface BlogListViewController ()<NetQueryDelegate>{
+
+    IBOutlet UITableView* _tableView;
+}
 
 @end
 
@@ -18,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [_tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,13 +30,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)onSucceed:(NSDictionary*)response{
+- (void)onSucceed:(NSDictionary*)response tag:(int)tag {
     NSLog(@"JSON: %@", response);
     
 }
 
-- (void)onFailed:(int)status errorMsg:(NSString*)errorMsg{
+- (void)onFailed:(int)status errorMsg:(NSString*)errorMsg tag:(int)tag {
     NSLog(@"Error: %d, %@", status, errorMsg);
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    BlogTableViewCell* cell = [[[NSBundle mainBundle]loadNibNamed:@"BlogTableViewCell" owner:self options:nil]objectAtIndex:0];
+    return cell;
 }
 
 @end
