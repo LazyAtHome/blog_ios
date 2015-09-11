@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "Loaded by BlogListViewController"; ObjectID = "A5M-7J-77L"; */
+"A5M-7J-77L.text" = "Loaded by BlogListViewController";
+
+/* Class = "UITabBarItem"; title = "Login"; ObjectID = "Fgw-Wc-YiW"; */
+"Fgw-Wc-YiW.title" = "Login";
+
+/* Class = "UILabel"; text = "Loaded by LoginViewController"; ObjectID = "GHF-IT-m4G"; */
+"GHF-IT-m4G.text" = "Loaded by LoginViewController";
+
+/* Class = "UILabel"; text = "View Blog List"; ObjectID = "KQZ-1w-vlD"; */
+"KQZ-1w-vlD.text" = "View Blog List";
+
+/* Class = "UILabel"; text = "Loaded by LoginViewController"; ObjectID = "NDk-cv-Gan"; */
+"NDk-cv-Gan.text" = "Loaded by LoginViewController";
+
+/* Class = "UITabBarItem"; title = "View Blog"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "View Blog";
+
+/* Class = "UILabel"; text = "Login View"; ObjectID = "ael-I3-Q5p"; */
+"ael-I3-Q5p.text" = "Login View";
+
+/* Class = "UITabBarItem"; title = "Login"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Login";
+
+/* Class = "UILabel"; text = "Login View"; ObjectID = "zEq-FU-wV5"; */
+"zEq-FU-wV5.text" = "Login View";

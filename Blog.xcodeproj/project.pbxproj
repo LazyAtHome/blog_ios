@@ -18,6 +18,10 @@
 		D067C9741BA006D200048D8B /* BlogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9731BA006D200048D8B /* BlogTests.m */; };
 		D067C9851BA007A100048D8B /* BlogListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9821BA007A100048D8B /* BlogListViewController.m */; };
 		D067C9861BA007A100048D8B /* BlogPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9841BA007A100048D8B /* BlogPostViewController.m */; };
+		D0B3DCE01BA2ABD80056F0D9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCDF1BA2ABD80056F0D9 /* LoginViewController.xib */; };
+		D0B3DCE21BA2AC070056F0D9 /* BlogListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCE11BA2AC070056F0D9 /* BlogListViewController.xib */; };
+		D0B3DCE41BA2AC3D0056F0D9 /* BlogPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCE31BA2AC3D0056F0D9 /* BlogPostViewController.xib */; };
+		D0B3DCE71BA2AF0F0056F0D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCE91BA2AF0F0056F0D9 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,14 @@
 		D067C9821BA007A100048D8B /* BlogListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogListViewController.m; sourceTree = "<group>"; };
 		D067C9831BA007A100048D8B /* BlogPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPostViewController.h; sourceTree = "<group>"; };
 		D067C9841BA007A100048D8B /* BlogPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPostViewController.m; sourceTree = "<group>"; };
+		D0B3DCDF1BA2ABD80056F0D9 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		D0B3DCE11BA2AC070056F0D9 /* BlogListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogListViewController.xib; sourceTree = "<group>"; };
+		D0B3DCE31BA2AC3D0056F0D9 /* BlogPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogPostViewController.xib; sourceTree = "<group>"; };
+		D0B3DCE81BA2AF0F0056F0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D0B3DCEA1BA2B0560056F0D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D0B3DCEB1BA2B08B0056F0D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		D0B3DCEC1BA2B08B0056F0D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		D0B3DCED1BA2B08B0056F0D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E15670437B00B1B771FE2B1D /* Pods-blog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-blog/Pods-blog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +154,7 @@
 		D067C9541BA006D200048D8B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0B3DCE91BA2AF0F0056F0D9 /* Localizable.strings */,
 				D067C9551BA006D200048D8B /* Info.plist */,
 				D067C9561BA006D200048D8B /* main.m */,
 			);
@@ -171,10 +184,13 @@
 			children = (
 				D067C9811BA007A100048D8B /* BlogListViewController.h */,
 				D067C9821BA007A100048D8B /* BlogListViewController.m */,
+				D0B3DCE11BA2AC070056F0D9 /* BlogListViewController.xib */,
 				D067C9831BA007A100048D8B /* BlogPostViewController.h */,
 				D067C9841BA007A100048D8B /* BlogPostViewController.m */,
+				D0B3DCE31BA2AC3D0056F0D9 /* BlogPostViewController.xib */,
 				D01770D41BA177E6003BA551 /* LoginViewController.h */,
 				D01770D51BA177E6003BA551 /* LoginViewController.m */,
+				D0B3DCDF1BA2ABD80056F0D9 /* LoginViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -268,6 +284,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = D067C9481BA006D200048D8B;
 			productRefGroup = D067C9521BA006D200048D8B /* Products */;
@@ -285,9 +302,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B3DCE41BA2AC3D0056F0D9 /* BlogPostViewController.xib in Resources */,
+				D0B3DCE01BA2ABD80056F0D9 /* LoginViewController.xib in Resources */,
 				D067C9631BA006D200048D8B /* Main.storyboard in Resources */,
+				D0B3DCE21BA2AC070056F0D9 /* BlogListViewController.xib in Resources */,
 				D067C9681BA006D200048D8B /* LaunchScreen.xib in Resources */,
 				D067C9651BA006D200048D8B /* Images.xcassets in Resources */,
+				D0B3DCE71BA2AF0F0056F0D9 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +406,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D067C9621BA006D200048D8B /* Base */,
+				D0B3DCEB1BA2B08B0056F0D9 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			path = ..;
@@ -394,8 +416,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				D067C9671BA006D200048D8B /* Base */,
+				D0B3DCEC1BA2B08B0056F0D9 /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		D0B3DCE91BA2AF0F0056F0D9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0B3DCE81BA2AF0F0056F0D9 /* Base */,
+				D0B3DCEA1BA2B0560056F0D9 /* en */,
+				D0B3DCED1BA2B08B0056F0D9 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

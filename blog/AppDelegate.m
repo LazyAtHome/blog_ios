@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "BlogListViewController.h"
+#import "BlogPostViewController.h"
+#import "LoginViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    UITabBarController* rootViewController = [[UITabBarController alloc]init];
+    BlogListViewController* viewBlogViewController = [[BlogListViewController alloc]init];
+    viewBlogViewController.tabBarItem.title = NSLocalizedString(@"View Blog", nil);
+    [rootViewController addChildViewController:viewBlogViewController];
+    
+    LoginViewController* loginViewController = [[LoginViewController alloc]init];
+    loginViewController.tabBarItem.title = NSLocalizedString(@"Login", nil);
+    [rootViewController addChildViewController:loginViewController];
+    self.window.rootViewController = rootViewController;
 
     return YES;
 }
