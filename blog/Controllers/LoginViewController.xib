@@ -20,8 +20,11 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qYF-Xg-XBL">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn5-oO-jhX">
-                            <rect key="frame" x="40" y="22" width="290" height="44"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn5-oO-jhX">
+                            <rect key="frame" x="40" y="20" width="290" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="xON-UF-9Jh"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -29,6 +32,9 @@
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.71372549019607845" blue="0.81960784313725488" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="yn5-oO-jhX" firstAttribute="top" secondItem="qYF-Xg-XBL" secondAttribute="top" constant="20" id="a11-t5-HYK"/>
+                        <constraint firstAttribute="trailing" secondItem="yn5-oO-jhX" secondAttribute="trailing" constant="45" id="dFG-B4-rC4"/>
+                        <constraint firstItem="yn5-oO-jhX" firstAttribute="leading" secondItem="qYF-Xg-XBL" secondAttribute="leading" constant="40" id="gJ8-4l-w2l"/>
                         <constraint firstAttribute="height" constant="64" id="n7V-CM-iqI"/>
                     </constraints>
                 </view>
