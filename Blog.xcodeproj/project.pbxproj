@@ -10,6 +10,10 @@
 		8D91B8EEACF53773C9FEED82 /* Pods_blog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1779A4D2ADD1EDB9A4142437 /* Pods_blog.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D01770D11BA12EFD003BA551 /* NetQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = D01770D01BA12EFD003BA551 /* NetQuery.m */; };
 		D01770D61BA177E6003BA551 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01770D51BA177E6003BA551 /* LoginViewController.m */; };
+		D063BAB81BA6A2F200B4FF14 /* home_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D063BAB41BA6A2F200B4FF14 /* home_highlight.png */; };
+		D063BAB91BA6A2F200B4FF14 /* home_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D063BAB51BA6A2F200B4FF14 /* home_normal.png */; };
+		D063BABA1BA6A2F200B4FF14 /* my_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D063BAB61BA6A2F200B4FF14 /* my_highlight.png */; };
+		D063BABB1BA6A2F200B4FF14 /* my_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D063BAB71BA6A2F200B4FF14 /* my_normal.png */; };
 		D067C9571BA006D200048D8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9561BA006D200048D8B /* main.m */; };
 		D067C95A1BA006D200048D8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9591BA006D200048D8B /* AppDelegate.m */; };
 		D067C9631BA006D200048D8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D067C9611BA006D200048D8B /* Main.storyboard */; };
@@ -44,6 +48,11 @@
 		D01770D31BA1556B003BA551 /* NetQueryDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetQueryDelegate.h; sourceTree = "<group>"; };
 		D01770D41BA177E6003BA551 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		D01770D51BA177E6003BA551 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D063BAB21BA6A1F800B4FF14 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
+		D063BAB41BA6A2F200B4FF14 /* home_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_highlight.png; sourceTree = "<group>"; };
+		D063BAB51BA6A2F200B4FF14 /* home_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_normal.png; sourceTree = "<group>"; };
+		D063BAB61BA6A2F200B4FF14 /* my_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_highlight.png; sourceTree = "<group>"; };
+		D063BAB71BA6A2F200B4FF14 /* my_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_normal.png; sourceTree = "<group>"; };
 		D067C9511BA006D200048D8B /* blog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067C9551BA006D200048D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D067C9561BA006D200048D8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -119,6 +128,25 @@
 			path = Net;
 			sourceTree = "<group>";
 		};
+		D063BAB11BA6A1EB00B4FF14 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D063BAB21BA6A1F800B4FF14 /* Const.h */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D063BAB31BA6A2F200B4FF14 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D063BAB41BA6A2F200B4FF14 /* home_highlight.png */,
+				D063BAB51BA6A2F200B4FF14 /* home_normal.png */,
+				D063BAB61BA6A2F200B4FF14 /* my_highlight.png */,
+				D063BAB71BA6A2F200B4FF14 /* my_normal.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		D067C9481BA006D200048D8B = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +170,7 @@
 		D067C9531BA006D200048D8B /* Blog */ = {
 			isa = PBXGroup;
 			children = (
+				D063BAB11BA6A1EB00B4FF14 /* App */,
 				D067C97E1BA0074300048D8B /* Models */,
 				D067C9801BA0074300048D8B /* Views */,
 				D067C97D1BA0074300048D8B /* Controllers */,
@@ -159,6 +188,7 @@
 		D067C9541BA006D200048D8B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D063BAB31BA6A2F200B4FF14 /* Resources */,
 				D0B3DCE91BA2AF0F0056F0D9 /* Localizable.strings */,
 				D067C9551BA006D200048D8B /* Info.plist */,
 				D067C9561BA006D200048D8B /* main.m */,
@@ -312,10 +342,14 @@
 			files = (
 				D0B3DCE41BA2AC3D0056F0D9 /* BlogPostViewController.xib in Resources */,
 				D0B3DCE01BA2ABD80056F0D9 /* LoginViewController.xib in Resources */,
+				D063BABB1BA6A2F200B4FF14 /* my_normal.png in Resources */,
+				D063BAB81BA6A2F200B4FF14 /* home_highlight.png in Resources */,
 				D067C9631BA006D200048D8B /* Main.storyboard in Resources */,
+				D063BABA1BA6A2F200B4FF14 /* my_highlight.png in Resources */,
 				D0B3DCE21BA2AC070056F0D9 /* BlogListViewController.xib in Resources */,
 				D067C9681BA006D200048D8B /* LaunchScreen.xib in Resources */,
 				D0B3DCF21BA2B3030056F0D9 /* BlogTableViewCell.xib in Resources */,
+				D063BAB91BA6A2F200B4FF14 /* home_normal.png in Resources */,
 				D067C9651BA006D200048D8B /* Images.xcassets in Resources */,
 				D0B3DCE71BA2AF0F0056F0D9 /* Localizable.strings in Resources */,
 			);

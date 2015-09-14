@@ -7,32 +7,33 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="170" id="KGk-i7-Jjw" customClass="BlogTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="135" id="KGk-i7-Jjw" customClass="BlogTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="135"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hc1-U2-ZeT">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hc1-U2-ZeT">
                         <rect key="frame" x="8" y="8" width="290" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.0" green="0.71372549019999998" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNV-3O-CaD">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Summery" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNV-3O-CaD">
                         <rect key="frame" x="8" y="59" width="290" height="98"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.0" green="0.71372549019999998" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             </tableViewCellContentView>
             <connections>
                 <outlet property="_content" destination="UNV-3O-CaD" id="Qe0-em-UVG"/>
                 <outlet property="_title" destination="Hc1-U2-ZeT" id="RZ3-bf-g8U"/>
             </connections>
-            <point key="canvasLocation" x="280" y="226"/>
+            <point key="canvasLocation" x="134" y="123.5"/>
         </tableViewCell>
     </objects>
 </document>

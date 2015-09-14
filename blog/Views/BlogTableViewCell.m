@@ -20,7 +20,7 @@
 - (void)awakeFromNib {
     // Initialization code
     [_title setText:NSLocalizedString(@"Title", nil) ];
-    [_content setText:NSLocalizedString(@"Content", nil)];
+    [_content setText:NSLocalizedString(@"Summery", nil)];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

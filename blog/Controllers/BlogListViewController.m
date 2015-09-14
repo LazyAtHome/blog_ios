@@ -10,7 +10,7 @@
 #import "BlogTableViewCell.h"
 #import "NetQuery.h"
 
-@interface BlogListViewController ()<NetQueryDelegate>{
+@interface BlogListViewController ()<UITableViewDelegate,NetQueryDelegate>{
 
     IBOutlet UITableView* _tableView;
 }
@@ -47,6 +47,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BlogTableViewCell* cell = [[[NSBundle mainBundle]loadNibNamed:@"BlogTableViewCell" owner:self options:nil]objectAtIndex:0];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 135;
 }
 
 @end
