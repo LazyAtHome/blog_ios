@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface BlogPostViewController : UIViewController
+@interface BlogPostViewController : BaseViewController
 
 
 @end

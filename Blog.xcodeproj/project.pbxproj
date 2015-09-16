@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		8D91B8EEACF53773C9FEED82 /* Pods_blog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1779A4D2ADD1EDB9A4142437 /* Pods_blog.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C2C3530F7CD089CD9B3D62BE /* Pods_Blog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9517C9E890700CADD5D96B19 /* Pods_Blog.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D01770D11BA12EFD003BA551 /* NetQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = D01770D01BA12EFD003BA551 /* NetQuery.m */; };
 		D01770D61BA177E6003BA551 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01770D51BA177E6003BA551 /* LoginViewController.m */; };
 		D063BAB81BA6A2F200B4FF14 /* home_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D063BAB41BA6A2F200B4FF14 /* home_highlight.png */; };
 		D063BAB91BA6A2F200B4FF14 /* home_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D063BAB51BA6A2F200B4FF14 /* home_normal.png */; };
 		D063BABA1BA6A2F200B4FF14 /* my_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D063BAB61BA6A2F200B4FF14 /* my_highlight.png */; };
 		D063BABB1BA6A2F200B4FF14 /* my_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D063BAB71BA6A2F200B4FF14 /* my_normal.png */; };
+		D063BABE1BA7ACDB00B4FF14 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063BABD1BA7ACDB00B4FF14 /* BaseViewController.m */; };
 		D067C9571BA006D200048D8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9561BA006D200048D8B /* main.m */; };
 		D067C95A1BA006D200048D8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9591BA006D200048D8B /* AppDelegate.m */; };
 		D067C9631BA006D200048D8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D067C9611BA006D200048D8B /* Main.storyboard */; };
@@ -43,6 +45,7 @@
 /* Begin PBXFileReference section */
 		1779A4D2ADD1EDB9A4142437 /* Pods_blog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		761514F581689EBD3C611AEA /* Pods-blog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blog.release.xcconfig"; path = "Pods/Target Support Files/Pods-blog/Pods-blog.release.xcconfig"; sourceTree = "<group>"; };
+		9517C9E890700CADD5D96B19 /* Pods_Blog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01770CF1BA12EFD003BA551 /* NetQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetQuery.h; sourceTree = "<group>"; };
 		D01770D01BA12EFD003BA551 /* NetQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetQuery.m; sourceTree = "<group>"; };
 		D01770D31BA1556B003BA551 /* NetQueryDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetQueryDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +56,8 @@
 		D063BAB51BA6A2F200B4FF14 /* home_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_normal.png; sourceTree = "<group>"; };
 		D063BAB61BA6A2F200B4FF14 /* my_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_highlight.png; sourceTree = "<group>"; };
 		D063BAB71BA6A2F200B4FF14 /* my_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_normal.png; sourceTree = "<group>"; };
+		D063BABC1BA7ACDB00B4FF14 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D063BABD1BA7ACDB00B4FF14 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		D067C9511BA006D200048D8B /* blog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067C9551BA006D200048D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D067C9561BA006D200048D8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -88,6 +93,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D91B8EEACF53773C9FEED82 /* Pods_blog.framework in Frameworks */,
+				C2C3530F7CD089CD9B3D62BE /* Pods_Blog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				1779A4D2ADD1EDB9A4142437 /* Pods_blog.framework */,
+				9517C9E890700CADD5D96B19 /* Pods_Blog.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -217,6 +224,8 @@
 		D067C97D1BA0074300048D8B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D063BABC1BA7ACDB00B4FF14 /* BaseViewController.h */,
+				D063BABD1BA7ACDB00B4FF14 /* BaseViewController.m */,
 				D067C9811BA007A100048D8B /* BlogListViewController.h */,
 				D067C9821BA007A100048D8B /* BlogListViewController.m */,
 				D0B3DCE11BA2AC070056F0D9 /* BlogListViewController.xib */,
@@ -377,7 +386,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blog/Pods-blog-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blog/Pods-Blog-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9CCD62A94BF1F7195423EB6E /* Check Pods Manifest.lock */ = {
@@ -407,7 +416,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blog/Pods-blog-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blog/Pods-Blog-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -418,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D067C9861BA007A100048D8B /* BlogPostViewController.m in Sources */,
+				D063BABE1BA7ACDB00B4FF14 /* BaseViewController.m in Sources */,
 				D067C95A1BA006D200048D8B /* AppDelegate.m in Sources */,
 				D01770D61BA177E6003BA551 /* LoginViewController.m in Sources */,
 				D067C9851BA007A100048D8B /* BlogListViewController.m in Sources */,

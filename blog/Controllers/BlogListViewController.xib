@@ -28,13 +28,29 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaD-qb-IIr">
+                            <rect key="frame" x="274" y="27" width="80" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="6R6-Sb-ZKX"/>
+                            </constraints>
+                            <state key="normal" title="Write Blog">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="gotoPost:" destination="-1" eventType="touchUpInside" id="woM-fe-3Ep"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.71372549019999998" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="DOx-KX-7my"/>
                         <constraint firstAttribute="trailing" secondItem="WK6-dH-XY8" secondAttribute="trailing" constant="45" id="Mkw-ow-j09"/>
                         <constraint firstAttribute="height" constant="64" id="RW9-QG-aJK"/>
+                        <constraint firstAttribute="bottom" secondItem="KaD-qb-IIr" secondAttribute="bottom" constant="7" id="UzU-nv-578"/>
+                        <constraint firstAttribute="trailing" secondItem="KaD-qb-IIr" secondAttribute="trailing" constant="21" id="cGz-Kr-ise"/>
                         <constraint firstItem="WK6-dH-XY8" firstAttribute="leading" secondItem="cz9-IC-AYq" secondAttribute="leading" constant="40" id="dJB-nT-5sc"/>
+                        <constraint firstItem="KaD-qb-IIr" firstAttribute="top" secondItem="cz9-IC-AYq" secondAttribute="top" constant="27" id="lf5-Ds-5Ol"/>
                         <constraint firstItem="WK6-dH-XY8" firstAttribute="top" secondItem="cz9-IC-AYq" secondAttribute="top" constant="20" id="uOU-hV-JPZ"/>
                     </constraints>
                 </view>

@@ -33,7 +33,10 @@
     loginViewController.tabBarItem.title = NSLocalizedString(@"Login", nil);
     loginViewController.tabBarItem.image = [UIImage imageNamed:@"my_normal"];
     [rootViewController addChildViewController:loginViewController];
-    self.window.rootViewController = rootViewController;
+    
+    UINavigationController* rootNavigation = [[UINavigationController alloc]initWithRootViewController:rootViewController];
+    rootNavigation.navigationBarHidden = YES;
+    self.window.rootViewController = rootNavigation;
 
     return YES;
 }

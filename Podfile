@@ -2,12 +2,12 @@
 # platform :ios, '8.4'
 use_frameworks!
 
-target 'blog' do
+target 'Blog' do
 pod 'AFNetworking', '~> 2.5'
-
+pod 'Bypass', '~> 1.0.1'
 end
 
-target 'blogTests' do
+target 'BlogTests' do
 
 end
 
