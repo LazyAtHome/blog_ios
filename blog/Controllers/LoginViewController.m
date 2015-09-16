@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "UserService.h"
 
 @interface LoginViewController () {
     
@@ -17,5 +18,17 @@
 
 @end
 @implementation LoginViewController
+
+- (IBAction)login:(id)sender {
+    [[UserService sharedUserService] login:_textAccount.text password:_textPassword.text delegate:self];
+}
+
+- (void)onSucceed:(NSDictionary*)response tag:(int)tag {
+    NSLog(@"JSON: %@", response);
+}
+
+- (void)onFailed:(int)status errorMsg:(NSString*)errorMsg tag:(int)tag {
+    NSLog(@"Error: %d, %@", status, errorMsg);
+}
 
 @end

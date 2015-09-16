@@ -10,7 +10,13 @@
 #import "BPMarkdownView.h"
 #import "RFMarkdownTextView.h"
 
-@interface BlogPostViewController ()
+@interface BlogPostViewController (){
+    BPMarkdownView *markdownPreviewView;
+    RFMarkdownTextView *markdownEditorView;
+    NSString* markdownText;
+}
+@property (weak, nonatomic) IBOutlet UIView *markdownContainerView;
+@property (weak, nonatomic) IBOutlet UIButton *btnPreview;
 
 @end
 
@@ -19,7 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    markdownText = @"";
     [self initRFMarkDownView];
+    [self initBPMarkDownView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,38 +36,40 @@
 }
 
 -(void)initBPMarkDownView{
-    CGRect markdownRect = CGRectMake(0.f, 20.f, self.view.frame.size.width, self.view.frame.size.height-20);
-    BPMarkdownView *markdownView = [[BPMarkdownView alloc] initWithFrame:markdownRect];
+    CGRect markdownRect = CGRectMake(0.f, 0.f, self.markdownContainerView.frame.size.width, self.markdownContainerView.frame.size.height);
+    markdownPreviewView = [[BPMarkdownView alloc] initWithFrame:markdownRect];
     
     // Obtain some markdown
-    NSString *markdown = @""
-    "# Hello, world!"
-    ""
-    "This is my text body. There are many more like it, "
-    "but this one is mine.";
     
     // Supply the markdown view with markdown to render
-    [markdownView setMarkdown:markdown];
-    
+    [markdownPreviewView setMarkdown:markdownText];
+    markdownPreviewView.hidden = YES;
     // Add the markdown view to a superview
-    [[self view] addSubview:markdownView];
+    [[self markdownContainerView] addSubview:markdownPreviewView];
 }
 
 -(void)initRFMarkDownView{
-    CGRect markdownRect = CGRectMake(0.f, 20.f, self.view.frame.size.width, self.view.frame.size.height-20);
-    RFMarkdownTextView *markdownView = [[RFMarkdownTextView alloc] initWithFrame:markdownRect];
-    
-    // Obtain some markdown
-    NSString *markdown = @""
-    "# Hello, world!"
-    ""
-    "This is my text body. There are many more like it, "
-    "but this one is mine.";
+    CGRect markdownRect = CGRectMake(0.f, 0.f, self.markdownContainerView.frame.size.width, self.markdownContainerView.frame.size.height);
+    markdownEditorView = [[RFMarkdownTextView alloc] initWithFrame:markdownRect];
     
     // Supply the markdown view with markdown to render
-    //[markdownView setText:markdown];
+    //[markdownEditorView setText:markdownText];
     
     // Add the markdown view to a superview
-    [[self view] addSubview:markdownView];
+    [[self markdownContainerView] addSubview:markdownEditorView];
+}
+- (IBAction)preview:(id)sender {
+    if(markdownPreviewView.hidden){
+        markdownText = markdownEditorView.text;
+        [markdownPreviewView setMarkdown:markdownText];
+        markdownPreviewView.hidden = NO;
+        markdownEditorView.hidden = YES;
+        [markdownPreviewView layoutSubviews];
+        [self.btnPreview setTitle:NSLocalizedString(@"Write", nil) forState:UIControlStateNormal];
+    }else{
+        markdownPreviewView.hidden = YES;
+        markdownEditorView.hidden = NO;
+        [self.btnPreview setTitle:NSLocalizedString(@"Preview", nil) forState:UIControlStateNormal];
+    }
 }
 @end

@@ -10,5 +10,6 @@
 #import "BaseViewController.h"
 
 @interface LoginViewController : BaseViewController
+- (IBAction)login:(id)sender;
 
 @end

@@ -10,6 +10,7 @@
 #import "BaseViewController.h"
 
 @interface BlogPostViewController : BaseViewController
+- (IBAction)preview:(id)sender;
 
 
 @end

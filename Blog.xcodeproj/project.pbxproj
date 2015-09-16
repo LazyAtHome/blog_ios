@@ -24,6 +24,7 @@
 		D067C9741BA006D200048D8B /* BlogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9731BA006D200048D8B /* BlogTests.m */; };
 		D067C9851BA007A100048D8B /* BlogListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9821BA007A100048D8B /* BlogListViewController.m */; };
 		D067C9861BA007A100048D8B /* BlogPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9841BA007A100048D8B /* BlogPostViewController.m */; };
+		D0A57A8E1BA9661300412A13 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A57A8D1BA9661300412A13 /* UserService.m */; };
 		D0B3DCE01BA2ABD80056F0D9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCDF1BA2ABD80056F0D9 /* LoginViewController.xib */; };
 		D0B3DCE21BA2AC070056F0D9 /* BlogListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCE11BA2AC070056F0D9 /* BlogListViewController.xib */; };
 		D0B3DCE41BA2AC3D0056F0D9 /* BlogPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCE31BA2AC3D0056F0D9 /* BlogPostViewController.xib */; };
@@ -73,6 +74,8 @@
 		D067C9821BA007A100048D8B /* BlogListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogListViewController.m; sourceTree = "<group>"; };
 		D067C9831BA007A100048D8B /* BlogPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPostViewController.h; sourceTree = "<group>"; };
 		D067C9841BA007A100048D8B /* BlogPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPostViewController.m; sourceTree = "<group>"; };
+		D0A57A8C1BA9661300412A13 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
+		D0A57A8D1BA9661300412A13 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
 		D0B3DCDF1BA2ABD80056F0D9 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		D0B3DCE11BA2AC070056F0D9 /* BlogListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogListViewController.xib; sourceTree = "<group>"; };
 		D0B3DCE31BA2AC3D0056F0D9 /* BlogPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogPostViewController.xib; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 				D01770CF1BA12EFD003BA551 /* NetQuery.h */,
 				D01770D01BA12EFD003BA551 /* NetQuery.m */,
 				D01770D31BA1556B003BA551 /* NetQueryDelegate.h */,
+				D0A57A8C1BA9661300412A13 /* UserService.h */,
+				D0A57A8D1BA9661300412A13 /* UserService.m */,
 			);
 			path = Net;
 			sourceTree = "<group>";
@@ -433,6 +438,7 @@
 				D067C9851BA007A100048D8B /* BlogListViewController.m in Sources */,
 				D01770D11BA12EFD003BA551 /* NetQuery.m in Sources */,
 				D0B3DCF11BA2B3030056F0D9 /* BlogTableViewCell.m in Sources */,
+				D0A57A8E1BA9661300412A13 /* UserService.m in Sources */,
 				D067C9571BA006D200048D8B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
