@@ -12,5 +12,6 @@
 @interface BlogListViewController : BaseViewController
 
 
+- (IBAction)gotoPost:(id)sender;
 @end
 

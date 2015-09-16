@@ -5,6 +5,7 @@ use_frameworks!
 target 'Blog' do
 pod 'AFNetworking', '~> 2.5'
 pod 'Bypass', '~> 1.0.1'
+pod 'RFMarkdownTextView', '~> 1.4'
 end
 
 target 'BlogTests' do

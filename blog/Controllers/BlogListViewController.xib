@@ -38,7 +38,7 @@
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="gotoPost:" destination="-1" eventType="touchUpInside" id="woM-fe-3Ep"/>
+                                <action selector="gotoPost:" destination="-1" eventType="touchUpInside" id="vEo-IH-d7r"/>
                             </connections>
                         </button>
                     </subviews>

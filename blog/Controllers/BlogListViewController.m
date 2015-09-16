@@ -15,7 +15,6 @@
 
     IBOutlet UITableView* _tableView;
 }
-- (IBAction)gotoPost:(id)sender;
 
 @end
 

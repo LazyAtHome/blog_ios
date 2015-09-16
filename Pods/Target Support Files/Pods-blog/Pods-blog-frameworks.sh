@@ -54,8 +54,12 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-Blog/AFNetworking.framework'
   install_framework 'Pods-Blog/Bypass.framework'
+  install_framework 'Pods-Blog/RFKeyboardToolbar.framework'
+  install_framework 'Pods-Blog/RFMarkdownTextView.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-Blog/AFNetworking.framework'
   install_framework 'Pods-Blog/Bypass.framework'
+  install_framework 'Pods-Blog/RFKeyboardToolbar.framework'
+  install_framework 'Pods-Blog/RFMarkdownTextView.framework'
 fi

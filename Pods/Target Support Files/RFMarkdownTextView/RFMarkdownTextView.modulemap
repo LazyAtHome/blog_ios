@@ -1,0 +1,6 @@
+framework module RFMarkdownTextView {
+  umbrella header "RFMarkdownTextView-umbrella.h"
+
+  export *
+  module * { export * }
+}
