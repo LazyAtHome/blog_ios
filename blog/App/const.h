@@ -10,7 +10,11 @@
 #define Blog_const_h
 #define COLOR_MAIN [UIColor colorWithRed:0/255.0 green:0xb6/255.0 blue:0xd1/255.0 alpha:1.0];
 
-#define HTTP_PREFIX                 @"http://jason.tunnel.mobi/blogserver"
+#define HTTP_PREFIX(x)                 "http://jason.tunnel.mobi/blogserver"#x
+#define URL_REGISTER                    @HTTP_PREFIX(/users/reg)
+#define URL_LOGIN                       @HTTP_PREFIX(/users/login)
+#define URL_LOGOUT                      @HTTP_PREFIX(/users/logout)
+#define URL_CURRENT                     @HTTP_PREFIX(/users/current)
 
 #define TAG_NETQUERY_REGISTER       1
 

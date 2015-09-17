@@ -12,9 +12,15 @@
 @implementation NetQuery
 @synthesize delegate = _delegate;
 
+-(instancetype)initWithDelegate:(id)delegate{
+    self = [super init];
+    self.delegate = delegate;
+    return self;
+}
+
 - (void)httpGet:(NSString*)url params:(NSDictionary*)params tag:(int)tag{
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         if(_delegate != nil && [_delegate respondsToSelector:@selector(onSucceed:tag:)]){
             [_delegate onSucceed:responseObject tag:tag];
@@ -35,7 +41,7 @@
 
 - (void)httpPost:(NSString*)url params:(NSDictionary*)params tag:(int)tag {
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager POST:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         if(_delegate != nil && [_delegate respondsToSelector:@selector(onSucceed:tag:)]){
             [_delegate onSucceed:responseObject tag:tag];

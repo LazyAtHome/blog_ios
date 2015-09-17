@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "XCTestCase+AsyncTesting.h"
 #import "NetQuery.h"
+#import "UserService.h"
+#import "Const.h"
 
-@interface blogTests : XCTestCase<NetQueryDelegate>
+@interface blogTests : XCTestCase<NetQueryDelegate>{
+}
 
 @end
 
@@ -25,34 +29,68 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
-
-- (void)testNetQuerySucceed {
-    NetQuery* netQuery = [[NetQuery alloc]init];
-    netQuery.delegate = self;
-    [netQuery httpPost:@"http://uas.landaojia.com/userappserver-web/user/isRegisted.do?mpNo=13210000001" params:nil tag:0];
-    
-    XCTAssert(YES, @"Pass");
+- (void)testRegister {
+    NSDateFormatter* dateFormatter = [[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"yyyy_MM_dd_HH_mm_ss"];
+    NSString* userName = [dateFormatter stringFromDate:[[NSDate alloc]init]];
+    NSString* password = @"123456";
+    [[UserService sharedUserService] register:userName password:password delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
 }
 
-- (void)testNetQueryFailed {
-    NetQuery* netQuery = [[NetQuery alloc]init];
-    netQuery.onSucceed = ^(NSDictionary* response){
-        NSLog(@"JSON: %@", response);
-        XCTAssert(YES, @"Pass");
-    };
-    netQuery.onFailed = ^(int status,NSString* errorMsg){
-        NSLog(@"Error: %d, %@", status, errorMsg);
-        XCTAssert(YES, @"Pass");
-    };
-    [netQuery httpGet:@"http://www.sina.com.cn" params:nil tag:0];
-    sleep(1);
+- (void)testLogin {
+    [[UserService sharedUserService] login:@"13817048334" password:@"123456" delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+}
+
+- (void)testLogout {
+    [[UserService sharedUserService] logout:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+}
+
+- (void)testCurrent {
+    [[UserService sharedUserService] current:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+    
 }
 
 - (void)onSucceed:(NSDictionary*)response tag:(int)tag {
+    switch(tag){
+        case TAG_NETQUERY_LOGIN:
+            NSLog(@"Login Succeed");
+            break;
+        case TAG_NETQUERY_REGISTER:
+            NSLog(@"Register Succeed");
+            break;
+        case TAG_NETQUERY_LOGOUT:
+            NSLog(@"Logout Succeed");
+            break;
+        case TAG_NETQUERY_CURRENT:
+            NSLog(@"Get Current User Succeed");
+            break;
+    }
+    
     NSLog(@"JSON: %@", response);
+    [self XCA_notify:XCTAsyncTestCaseStatusSucceeded];
+    XCTAssert(NO, "succeed");
 }
 
 - (void)onFailed:(int)status errorMsg:(NSString*)errorMsg tag:(int)tag {
+    switch(tag){
+        case TAG_NETQUERY_LOGIN:
+            NSLog(@"Login Failed");
+            break;
+        case TAG_NETQUERY_REGISTER:
+            NSLog(@"Register Failed");
+            break;
+        case TAG_NETQUERY_LOGOUT:
+            NSLog(@"Logout Failed");
+            break;
+        case TAG_NETQUERY_CURRENT:
+            NSLog(@"Get Current User Failed");
+            break;
+    }
+    [self XCA_notify:XCTAsyncTestCaseStatusFailed];
     NSLog(@"Error: %d, %@", status, errorMsg);
 }
 

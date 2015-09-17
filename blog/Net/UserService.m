@@ -32,31 +32,33 @@ static UserService * _sharedUserService = nil;
 -(void)register:(NSString*)userName password:(NSString*)password delegate:(id)delegate{
     NetQuery* netQuery = [[NetQuery alloc]init];
     netQuery.delegate = delegate;
-    NSString* url = [[NSString alloc]initWithFormat:@"%@/users/reg",HTTP_PREFIX];
     NSMutableDictionary* dic = [[NSMutableDictionary alloc]init];
     [dic setObject:userName forKey:@"userName"];
     [dic setObject:password forKey:@"cryptedPassword"];
     [dic setObject:password forKey:@"cryptedPasswordConfirm"];
     [dic setObject:userName forKey:@"email"];
-    [netQuery httpPost:url params:nil tag:TAG_NETQUERY_REGISTER];
+    [netQuery httpPost:URL_REGISTER params:dic tag:TAG_NETQUERY_REGISTER];
 }
 
 -(void)login:(NSString*)userName password:(NSString*)password delegate:(id)delegate{
     NetQuery* netQuery = [[NetQuery alloc]init];
     netQuery.delegate = delegate;
-    NSString* url = [[NSString alloc]initWithFormat:@"%@/users/login",HTTP_PREFIX];
     NSMutableDictionary* dic = [[NSMutableDictionary alloc]init];
     [dic setObject:userName forKey:@"userName"];
     [dic setObject:password forKey:@"password"];
-    [netQuery httpPost:url params:nil tag:TAG_NETQUERY_LOGIN];
+    [netQuery httpPost:URL_LOGIN params:dic tag:TAG_NETQUERY_LOGIN];
 }
 
 -(void)logout:(id)delegate{
-    
+    NetQuery* netQuery = [[NetQuery alloc]init];
+    netQuery.delegate = delegate;
+    [netQuery httpGet:URL_LOGIN params:nil tag:TAG_NETQUERY_LOGOUT];
 }
 
 -(void)current:(id)delegate{
-    
+    NetQuery* netQuery = [[NetQuery alloc]init];
+    netQuery.delegate = delegate;
+    [netQuery httpGet:URL_CURRENT params:nil tag:TAG_NETQUERY_CURRENT];
 }
 
 @end
