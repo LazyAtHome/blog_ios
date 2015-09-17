@@ -52,7 +52,7 @@ static UserService * _sharedUserService = nil;
 -(void)logout:(id)delegate{
     NetQuery* netQuery = [[NetQuery alloc]init];
     netQuery.delegate = delegate;
-    [netQuery httpGet:URL_LOGIN params:nil tag:TAG_NETQUERY_LOGOUT];
+    [netQuery httpGet:URL_LOGOUT params:nil tag:TAG_NETQUERY_LOGOUT];
 }
 
 -(void)current:(id)delegate{

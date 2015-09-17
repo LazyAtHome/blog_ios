@@ -31,16 +31,17 @@
 }
 - (void)testRegister {
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"yyyy_MM_dd_HH_mm_ss"];
-    NSString* userName = [dateFormatter stringFromDate:[[NSDate alloc]init]];
-    NSString* password = @"123456";
+    [dateFormatter setDateFormat:@"HH_mm_ss"];
+    NSString* userName = [[NSString alloc]initWithFormat:@"%@@126.com",[dateFormatter stringFromDate:[[NSDate alloc]init]] ];
+    NSString* password = @"1234567890";
     [[UserService sharedUserService] register:userName password:password delegate:self];
     [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
 }
 
 - (void)testLogin {
-    [[UserService sharedUserService] login:@"13817048334" password:@"123456" delegate:self];
+    [[UserService sharedUserService] login:@"peterwang" password:@"1234567" delegate:self];
     [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+    [self testCurrent];
 }
 
 - (void)testLogout {
@@ -49,9 +50,10 @@
 }
 
 - (void)testCurrent {
+    [[UserService sharedUserService] login:@"peterwang" password:@"1234567" delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
     [[UserService sharedUserService] current:self];
     [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
-    
 }
 
 - (void)onSucceed:(NSDictionary*)response tag:(int)tag {
@@ -71,8 +73,18 @@
     }
     
     NSLog(@"JSON: %@", response);
-    [self XCA_notify:XCTAsyncTestCaseStatusSucceeded];
-    XCTAssert(NO, "succeed");
+    NSNumber* responseCode = nil;
+    if(response != nil){
+        responseCode = [response objectForKey:@"responseCode"];
+    }
+    if(responseCode != nil && responseCode.intValue == 0 ){
+        [self XCA_notify:XCTAsyncTestCaseStatusSucceeded];
+        XCTAssert(YES, "succeed");
+        
+    }else{
+        [self XCA_notify:XCTAsyncTestCaseStatusFailed];
+        XCTAssert(NO, "failed");
+    }
 }
 
 - (void)onFailed:(int)status errorMsg:(NSString*)errorMsg tag:(int)tag {
@@ -91,6 +103,7 @@
             break;
     }
     [self XCA_notify:XCTAsyncTestCaseStatusFailed];
+    XCTAssert(NO, "failed");
     NSLog(@"Error: %d, %@", status, errorMsg);
 }
 
