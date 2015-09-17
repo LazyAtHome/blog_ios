@@ -7,6 +7,7 @@ pod 'AFNetworking', '~> 2.5'
 pod 'Bypass', '~> 1.0.1'
 pod 'RFMarkdownTextView', '~> 1.4'
 pod 'UIViewController+HUD', '~> 1.0.0'
+pod 'WCAlertView', '~> 1.0.1'
 end
 
 target 'BlogTests' do

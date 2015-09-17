@@ -11,5 +11,5 @@
 
 @interface LoginViewController : BaseViewController
 - (IBAction)login:(id)sender;
-
+- (IBAction)logout:(id)sender;
 @end

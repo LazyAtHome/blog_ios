@@ -8,30 +8,74 @@
 
 #import "LoginViewController.h"
 #import "UIViewController+HUD.h"
+#import "WCAlertView.h"
 #import "UserService.h"
+#import "LDJValidator.h"
+#import "Const.h"
+#import "Response.h"
+#import "User.h"
 
 @interface LoginViewController () {
     
     IBOutlet UITextField* _textAccount;
     
     IBOutlet UITextField* _textPassword;
+    __weak IBOutlet UIView *viewLogined;
+    
+    __weak IBOutlet UIView *viewLogin;
+    __weak IBOutlet UILabel *labelUserName;
 }
 
 @end
 @implementation LoginViewController
 
 - (IBAction)login:(id)sender {
+    LDJValidator* validator = [[LDJValidator alloc]init];
+    if(![validator isValidUserName:_textAccount.text]){
+        [self showHudWithTitle:NSLocalizedString(@"User Name Check Error(6-20 length)", nil)];
+        return;
+    }
+    if(![validator isValidUserName:_textPassword.text]){
+        [self showHudWithTitle:NSLocalizedString(@"Password Check Error(6-20 length)", nil)];
+        return;
+    }
     [self showHud];
     [[UserService sharedUserService] login:_textAccount.text password:_textPassword.text delegate:self];
+}
+
+- (IBAction)logout:(id)sender {
+    [self showHud];
+    [[UserService sharedUserService] logout:self];
 }
 
 - (void)onSucceed:(NSDictionary*)response tag:(int)tag {
     [self hideHud];
     NSLog(@"JSON: %@", response);
+    if(tag == TAG_NETQUERY_LOGIN){
+        Response* loginResponse = [[Response alloc]initWithDictionary:response];
+        if([loginResponse isSucceed]){
+           viewLogin.hidden = YES;
+           [self showAlert:NSLocalizedString(@"Login Succeed", nil)];
+            User* user = [[User alloc]initWithDictionary:loginResponse.data];
+            [labelUserName setText:user.userName];
+        }else{
+            [self showAlert:loginResponse.responseMsg];
+        }
+    }
+    else if(tag == TAG_NETQUERY_LOGOUT){
+        Response* loginResponse = [[Response alloc]initWithDictionary:response];
+        if([loginResponse isSucceed]){
+            viewLogin.hidden = NO;
+            [self showAlert:NSLocalizedString(@"Logouted", nil)];
+        }else{
+            [self showAlert:loginResponse.responseMsg];
+        }
+    }
 }
 
 - (void)onFailed:(int)status errorMsg:(NSString*)errorMsg tag:(int)tag {
     [self hideHud];
+    [self showAlert:errorMsg];
     NSLog(@"Error: %d, %@", status, errorMsg);
 }
 

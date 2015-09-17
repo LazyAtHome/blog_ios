@@ -58,6 +58,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-Blog/RFKeyboardToolbar.framework'
   install_framework 'Pods-Blog/RFMarkdownTextView.framework'
   install_framework 'Pods-Blog/UIViewController_HUD.framework'
+  install_framework 'Pods-Blog/WCAlertView.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-Blog/AFNetworking.framework'
@@ -66,4 +67,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-Blog/RFKeyboardToolbar.framework'
   install_framework 'Pods-Blog/RFMarkdownTextView.framework'
   install_framework 'Pods-Blog/UIViewController_HUD.framework'
+  install_framework 'Pods-Blog/WCAlertView.framework'
 fi

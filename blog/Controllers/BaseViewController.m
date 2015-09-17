@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "WCAlertView.h"
 
 @interface BaseViewController ()
 
@@ -73,4 +74,15 @@
     [cell addGestureRecognizer:tap];
 }
 
+-(void)showAlert:(NSString *)alertMsg{
+    [WCAlertView showAlertWithTitle:alertMsg
+                            message:nil
+                 customizationBlock:nil
+                    completionBlock:nil
+                  cancelButtonTitle:NSLocalizedString(@"ok", nil)
+                  otherButtonTitles: nil];
+}
+-(void)back{
+    [[self navigationController]popViewControllerAnimated:YES];
+}
 @end

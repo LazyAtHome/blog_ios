@@ -11,6 +11,10 @@
 {
 }
 //去掉多余得cell
--(void)setExtraCellLineHidden: (UITableView *)tableView;
--(void)addAction:(UIView*)cell action:(SEL)action;
+- (void)setExtraCellLineHidden: (UITableView *)tableView;
+- (void)addAction:(UIView*)cell action:(SEL)action;
+
+- (void)showAlert:(NSString*)alertMsg;
+- (IBAction) back;
+
 @end
