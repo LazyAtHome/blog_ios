@@ -11,6 +11,8 @@
 #import "XCTestCase+AsyncTesting.h"
 #import "NetQuery.h"
 #import "UserService.h"
+#import "Response.h"
+#import "User.h"
 #import "Const.h"
 
 @interface blogTests : XCTestCase<NetQueryDelegate>{
@@ -57,9 +59,25 @@
 }
 
 - (void)onSucceed:(NSDictionary*)response tag:(int)tag {
+    
+    NSLog(@"JSON: %@", response);
+    
+    Response* succResponse = [[Response alloc]initWithDictionary:response];
+    if([succResponse isSucceed]){
+        [self XCA_notify:XCTAsyncTestCaseStatusSucceeded];
+        XCTAssert(YES, "succeed");
+    }else{
+        [self XCA_notify:XCTAsyncTestCaseStatusFailed];
+        XCTAssert(NO, "failed");
+        return;
+    }
     switch(tag){
         case TAG_NETQUERY_LOGIN:
             NSLog(@"Login Succeed");
+            if(succResponse.data != nil){
+                User* user = [[User alloc]initWithDictionary:succResponse.data];
+                NSLog(user.userName);
+            }
             break;
         case TAG_NETQUERY_REGISTER:
             NSLog(@"Register Succeed");
@@ -72,19 +90,6 @@
             break;
     }
     
-    NSLog(@"JSON: %@", response);
-    NSNumber* responseCode = nil;
-    if(response != nil){
-        responseCode = [response objectForKey:@"responseCode"];
-    }
-    if(responseCode != nil && responseCode.intValue == 0 ){
-        [self XCA_notify:XCTAsyncTestCaseStatusSucceeded];
-        XCTAssert(YES, "succeed");
-        
-    }else{
-        [self XCA_notify:XCTAsyncTestCaseStatusFailed];
-        XCTAssert(NO, "failed");
-    }
 }
 
 - (void)onFailed:(int)status errorMsg:(NSString*)errorMsg tag:(int)tag {

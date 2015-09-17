@@ -1,0 +1,6 @@
+framework module UIViewController_HUD {
+  umbrella header "UIViewController+HUD-umbrella.h"
+
+  export *
+  module * { export * }
+}

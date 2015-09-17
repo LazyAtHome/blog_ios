@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "UIViewController+HUD.h"
 #import "UserService.h"
 
 @interface LoginViewController () {
@@ -20,14 +21,17 @@
 @implementation LoginViewController
 
 - (IBAction)login:(id)sender {
+    [self showHud];
     [[UserService sharedUserService] login:_textAccount.text password:_textPassword.text delegate:self];
 }
 
 - (void)onSucceed:(NSDictionary*)response tag:(int)tag {
+    [self hideHud];
     NSLog(@"JSON: %@", response);
 }
 
 - (void)onFailed:(int)status errorMsg:(NSString*)errorMsg tag:(int)tag {
+    [self hideHud];
     NSLog(@"Error: %d, %@", status, errorMsg);
 }
 

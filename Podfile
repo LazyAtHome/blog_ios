@@ -6,10 +6,10 @@ target 'Blog' do
 pod 'AFNetworking', '~> 2.5'
 pod 'Bypass', '~> 1.0.1'
 pod 'RFMarkdownTextView', '~> 1.4'
-pod 'XCAsyncTestCase', '~> 1.0.0'
+pod 'UIViewController+HUD', '~> 1.0.0'
 end
 
 target 'BlogTests' do
-
+pod 'XCAsyncTestCase', '~> 1.0.0'
 end
 
