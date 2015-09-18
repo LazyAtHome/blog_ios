@@ -11,6 +11,8 @@
 
 @interface NetQuery : NSObject
 
+-(instancetype)initWithDelegate:(id)delegate;
+
 @property (nonatomic,weak) id<NetQueryDelegate> delegate;
 @property (nonatomic,copy) NetQuerySucceed onSucceed;
 @property (nonatomic,copy) NetQueryFailed onFailed;

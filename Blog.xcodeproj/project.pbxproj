@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C14C62FC6AE497BE2199B40 /* Pods_BlogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C291F9DF2D02D2D58B8304F /* Pods_BlogTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8D91B8EEACF53773C9FEED82 /* Pods_blog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1779A4D2ADD1EDB9A4142437 /* Pods_blog.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C2C3530F7CD089CD9B3D62BE /* Pods_Blog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9517C9E890700CADD5D96B19 /* Pods_Blog.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D01770D11BA12EFD003BA551 /* NetQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = D01770D01BA12EFD003BA551 /* NetQuery.m */; };
 		D01770D61BA177E6003BA551 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01770D51BA177E6003BA551 /* LoginViewController.m */; };
+		D0404A211BAA9A190072DF55 /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = D0404A201BAA9A190072DF55 /* Validator.m */; };
+		D0404A241BAA9D3F0072DF55 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D0404A231BAA9D3F0072DF55 /* User.m */; };
+		D0404A271BAA9D6A0072DF55 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = D0404A261BAA9D6A0072DF55 /* Response.m */; };
+		D0404A2A1BAAA4AA0072DF55 /* LDJValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D0404A291BAAA4AA0072DF55 /* LDJValidator.m */; };
+		D0404A2B1BAAB0000072DF55 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0404A2D1BAAB0000072DF55 /* LoginViewController.xib */; };
 		D063BAB81BA6A2F200B4FF14 /* home_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D063BAB41BA6A2F200B4FF14 /* home_highlight.png */; };
 		D063BAB91BA6A2F200B4FF14 /* home_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D063BAB51BA6A2F200B4FF14 /* home_normal.png */; };
 		D063BABA1BA6A2F200B4FF14 /* my_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D063BAB61BA6A2F200B4FF14 /* my_highlight.png */; };
 		D063BABB1BA6A2F200B4FF14 /* my_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D063BAB71BA6A2F200B4FF14 /* my_normal.png */; };
+		D063BABE1BA7ACDB00B4FF14 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D063BABD1BA7ACDB00B4FF14 /* BaseViewController.m */; };
 		D067C9571BA006D200048D8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9561BA006D200048D8B /* main.m */; };
 		D067C95A1BA006D200048D8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9591BA006D200048D8B /* AppDelegate.m */; };
 		D067C9631BA006D200048D8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D067C9611BA006D200048D8B /* Main.storyboard */; };
@@ -22,7 +30,7 @@
 		D067C9741BA006D200048D8B /* BlogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9731BA006D200048D8B /* BlogTests.m */; };
 		D067C9851BA007A100048D8B /* BlogListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9821BA007A100048D8B /* BlogListViewController.m */; };
 		D067C9861BA007A100048D8B /* BlogPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9841BA007A100048D8B /* BlogPostViewController.m */; };
-		D0B3DCE01BA2ABD80056F0D9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCDF1BA2ABD80056F0D9 /* LoginViewController.xib */; };
+		D0A57A8E1BA9661300412A13 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A57A8D1BA9661300412A13 /* UserService.m */; };
 		D0B3DCE21BA2AC070056F0D9 /* BlogListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCE11BA2AC070056F0D9 /* BlogListViewController.xib */; };
 		D0B3DCE41BA2AC3D0056F0D9 /* BlogPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCE31BA2AC3D0056F0D9 /* BlogPostViewController.xib */; };
 		D0B3DCE71BA2AF0F0056F0D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCE91BA2AF0F0056F0D9 /* Localizable.strings */; };
@@ -42,17 +50,34 @@
 
 /* Begin PBXFileReference section */
 		1779A4D2ADD1EDB9A4142437 /* Pods_blog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_blog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B48AB7251A5296E0EDB8639 /* Pods-BlogTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlogTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BlogTests/Pods-BlogTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2C291F9DF2D02D2D58B8304F /* Pods_BlogTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlogTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73024609DED514981595B09A /* Pods-BlogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlogTests/Pods-BlogTests.release.xcconfig"; sourceTree = "<group>"; };
 		761514F581689EBD3C611AEA /* Pods-blog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blog.release.xcconfig"; path = "Pods/Target Support Files/Pods-blog/Pods-blog.release.xcconfig"; sourceTree = "<group>"; };
+		9517C9E890700CADD5D96B19 /* Pods_Blog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D01770CF1BA12EFD003BA551 /* NetQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetQuery.h; sourceTree = "<group>"; };
 		D01770D01BA12EFD003BA551 /* NetQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetQuery.m; sourceTree = "<group>"; };
 		D01770D31BA1556B003BA551 /* NetQueryDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetQueryDelegate.h; sourceTree = "<group>"; };
 		D01770D41BA177E6003BA551 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		D01770D51BA177E6003BA551 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D0404A1F1BAA9A190072DF55 /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
+		D0404A201BAA9A190072DF55 /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validator.m; sourceTree = "<group>"; };
+		D0404A221BAA9D3F0072DF55 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		D0404A231BAA9D3F0072DF55 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		D0404A251BAA9D6A0072DF55 /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
+		D0404A261BAA9D6A0072DF55 /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
+		D0404A281BAAA4AA0072DF55 /* LDJValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDJValidator.h; sourceTree = "<group>"; };
+		D0404A291BAAA4AA0072DF55 /* LDJValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDJValidator.m; sourceTree = "<group>"; };
+		D0404A2C1BAAB0000072DF55 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/LoginViewController.xib"; sourceTree = "<group>"; };
+		D0404A2F1BAAB18C0072DF55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginViewController.xib; sourceTree = "<group>"; };
+		D0404A301BAAB1940072DF55 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LoginViewController.xib; sourceTree = "<group>"; };
 		D063BAB21BA6A1F800B4FF14 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
 		D063BAB41BA6A2F200B4FF14 /* home_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_highlight.png; sourceTree = "<group>"; };
 		D063BAB51BA6A2F200B4FF14 /* home_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_normal.png; sourceTree = "<group>"; };
 		D063BAB61BA6A2F200B4FF14 /* my_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_highlight.png; sourceTree = "<group>"; };
 		D063BAB71BA6A2F200B4FF14 /* my_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_normal.png; sourceTree = "<group>"; };
+		D063BABC1BA7ACDB00B4FF14 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		D063BABD1BA7ACDB00B4FF14 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		D067C9511BA006D200048D8B /* blog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067C9551BA006D200048D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D067C9561BA006D200048D8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,7 +93,8 @@
 		D067C9821BA007A100048D8B /* BlogListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogListViewController.m; sourceTree = "<group>"; };
 		D067C9831BA007A100048D8B /* BlogPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPostViewController.h; sourceTree = "<group>"; };
 		D067C9841BA007A100048D8B /* BlogPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPostViewController.m; sourceTree = "<group>"; };
-		D0B3DCDF1BA2ABD80056F0D9 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		D0A57A8C1BA9661300412A13 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
+		D0A57A8D1BA9661300412A13 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
 		D0B3DCE11BA2AC070056F0D9 /* BlogListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogListViewController.xib; sourceTree = "<group>"; };
 		D0B3DCE31BA2AC3D0056F0D9 /* BlogPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogPostViewController.xib; sourceTree = "<group>"; };
 		D0B3DCE81BA2AF0F0056F0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -88,6 +114,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D91B8EEACF53773C9FEED82 /* Pods_blog.framework in Frameworks */,
+				C2C3530F7CD089CD9B3D62BE /* Pods_Blog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C14C62FC6AE497BE2199B40 /* Pods_BlogTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +133,8 @@
 			isa = PBXGroup;
 			children = (
 				1779A4D2ADD1EDB9A4142437 /* Pods_blog.framework */,
+				9517C9E890700CADD5D96B19 /* Pods_Blog.framework */,
+				2C291F9DF2D02D2D58B8304F /* Pods_BlogTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,6 +144,8 @@
 			children = (
 				E15670437B00B1B771FE2B1D /* Pods-blog.debug.xcconfig */,
 				761514F581689EBD3C611AEA /* Pods-blog.release.xcconfig */,
+				1B48AB7251A5296E0EDB8639 /* Pods-BlogTests.debug.xcconfig */,
+				73024609DED514981595B09A /* Pods-BlogTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -124,13 +156,27 @@
 				D01770CF1BA12EFD003BA551 /* NetQuery.h */,
 				D01770D01BA12EFD003BA551 /* NetQuery.m */,
 				D01770D31BA1556B003BA551 /* NetQueryDelegate.h */,
+				D0A57A8C1BA9661300412A13 /* UserService.h */,
+				D0A57A8D1BA9661300412A13 /* UserService.m */,
 			);
 			path = Net;
+			sourceTree = "<group>";
+		};
+		D0404A1E1BAA9A080072DF55 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				D0404A1F1BAA9A190072DF55 /* Validator.h */,
+				D0404A201BAA9A190072DF55 /* Validator.m */,
+				D0404A281BAAA4AA0072DF55 /* LDJValidator.h */,
+				D0404A291BAAA4AA0072DF55 /* LDJValidator.m */,
+			);
+			path = Validator;
 			sourceTree = "<group>";
 		};
 		D063BAB11BA6A1EB00B4FF14 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				D0404A1E1BAA9A080072DF55 /* Validator */,
 				D063BAB21BA6A1F800B4FF14 /* Const.h */,
 			);
 			path = App;
@@ -217,6 +263,8 @@
 		D067C97D1BA0074300048D8B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D063BABC1BA7ACDB00B4FF14 /* BaseViewController.h */,
+				D063BABD1BA7ACDB00B4FF14 /* BaseViewController.m */,
 				D067C9811BA007A100048D8B /* BlogListViewController.h */,
 				D067C9821BA007A100048D8B /* BlogListViewController.m */,
 				D0B3DCE11BA2AC070056F0D9 /* BlogListViewController.xib */,
@@ -225,7 +273,7 @@
 				D0B3DCE31BA2AC3D0056F0D9 /* BlogPostViewController.xib */,
 				D01770D41BA177E6003BA551 /* LoginViewController.h */,
 				D01770D51BA177E6003BA551 /* LoginViewController.m */,
-				D0B3DCDF1BA2ABD80056F0D9 /* LoginViewController.xib */,
+				D0404A2D1BAAB0000072DF55 /* LoginViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -233,6 +281,10 @@
 		D067C97E1BA0074300048D8B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D0404A221BAA9D3F0072DF55 /* User.h */,
+				D0404A231BAA9D3F0072DF55 /* User.m */,
+				D0404A251BAA9D6A0072DF55 /* Response.h */,
+				D0404A261BAA9D6A0072DF55 /* Response.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -282,9 +334,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D067C97A1BA006D200048D8B /* Build configuration list for PBXNativeTarget "BlogTests" */;
 			buildPhases = (
+				C9398D268B7E8BD9765A7709 /* Check Pods Manifest.lock */,
 				D067C9691BA006D200048D8B /* Sources */,
 				D067C96A1BA006D200048D8B /* Frameworks */,
 				D067C96B1BA006D200048D8B /* Resources */,
+				D034C32FE9E55C578B6B1CEC /* Embed Pods Frameworks */,
+				10D0A244F281B376A76007C4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -341,7 +396,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0B3DCE41BA2AC3D0056F0D9 /* BlogPostViewController.xib in Resources */,
-				D0B3DCE01BA2ABD80056F0D9 /* LoginViewController.xib in Resources */,
+				D0404A2B1BAAB0000072DF55 /* LoginViewController.xib in Resources */,
 				D063BABB1BA6A2F200B4FF14 /* my_normal.png in Resources */,
 				D063BAB81BA6A2F200B4FF14 /* home_highlight.png in Resources */,
 				D067C9631BA006D200048D8B /* Main.storyboard in Resources */,
@@ -365,6 +420,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		10D0A244F281B376A76007C4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlogTests/Pods-BlogTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8DDE9F42964F15715A25DE82 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,7 +447,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blog/Pods-blog-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blog/Pods-Blog-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9CCD62A94BF1F7195423EB6E /* Check Pods Manifest.lock */ = {
@@ -407,7 +477,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-blog/Pods-blog-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Blog/Pods-Blog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9398D268B7E8BD9765A7709 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D034C32FE9E55C578B6B1CEC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BlogTests/Pods-BlogTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -417,12 +517,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0404A271BAA9D6A0072DF55 /* Response.m in Sources */,
 				D067C9861BA007A100048D8B /* BlogPostViewController.m in Sources */,
+				D063BABE1BA7ACDB00B4FF14 /* BaseViewController.m in Sources */,
+				D0404A211BAA9A190072DF55 /* Validator.m in Sources */,
 				D067C95A1BA006D200048D8B /* AppDelegate.m in Sources */,
 				D01770D61BA177E6003BA551 /* LoginViewController.m in Sources */,
+				D0404A2A1BAAA4AA0072DF55 /* LDJValidator.m in Sources */,
 				D067C9851BA007A100048D8B /* BlogListViewController.m in Sources */,
+				D0404A241BAA9D3F0072DF55 /* User.m in Sources */,
 				D01770D11BA12EFD003BA551 /* NetQuery.m in Sources */,
 				D0B3DCF11BA2B3030056F0D9 /* BlogTableViewCell.m in Sources */,
+				D0A57A8E1BA9661300412A13 /* UserService.m in Sources */,
 				D067C9571BA006D200048D8B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +552,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		D0404A2D1BAAB0000072DF55 /* LoginViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0404A2C1BAAB0000072DF55 /* zh-Hans */,
+				D0404A2F1BAAB18C0072DF55 /* Base */,
+				D0404A301BAAB1940072DF55 /* en */,
+			);
+			name = LoginViewController.xib;
+			sourceTree = "<group>";
+		};
 		D067C9611BA006D200048D8B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -514,6 +630,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Bypass/Libraries/bypass-core/src\"",
+					"\"${PODS_ROOT}/XCAsyncTestCase\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -551,6 +673,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Bypass/Libraries/bypass-core/src\"",
+					"\"${PODS_ROOT}/XCAsyncTestCase\"",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -586,6 +714,7 @@
 		};
 		D067C97B1BA006D200048D8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B48AB7251A5296E0EDB8639 /* Pods-BlogTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -596,6 +725,12 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Bypass/Libraries/bypass-core/src\"",
+					Pods/XCAsyncTestCase/AsyncXCTestingKit/AsyncXCTestingKit,
+				);
 				INFOPLIST_FILE = BlogTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = BlogTests;
@@ -605,11 +740,18 @@
 		};
 		D067C97C1BA006D200048D8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73024609DED514981595B09A /* Pods-BlogTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"${PODS_ROOT}/Bypass/Libraries/bypass-core/src\"",
+					Pods/XCAsyncTestCase/AsyncXCTestingKit/AsyncXCTestingKit,
 				);
 				INFOPLIST_FILE = BlogTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface BlogPostViewController : UIViewController
+@interface BlogPostViewController : BaseViewController
+- (IBAction)preview:(id)sender;
 
 
 @end

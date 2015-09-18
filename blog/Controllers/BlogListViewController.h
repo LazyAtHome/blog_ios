@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface BlogListViewController : UIViewController
+@interface BlogListViewController : BaseViewController
 
 
+- (IBAction)gotoPost:(id)sender;
 @end
 

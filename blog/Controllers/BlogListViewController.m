@@ -7,6 +7,7 @@
 //
 
 #import "BlogListViewController.h"
+#import "BlogPostViewController.h"
 #import "BlogTableViewCell.h"
 #import "NetQuery.h"
 
@@ -53,4 +54,8 @@
     return 135;
 }
 
+- (IBAction)gotoPost:(id)sender {
+    BlogPostViewController* postVC = [[BlogPostViewController alloc]initWithNibName:@"BlogPostViewController" bundle:(NSBundle *)nil];
+    [self.navigationController pushViewController:postVC animated:YES];
+}
 @end

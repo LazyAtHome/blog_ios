@@ -1,0 +1,6 @@
+framework module XCAsyncTestCase {
+  umbrella header "XCAsyncTestCase-umbrella.h"
+
+  export *
+  module * { export * }
+}
