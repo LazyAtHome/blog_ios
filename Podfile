@@ -8,6 +8,7 @@ pod 'Bypass', '~> 1.0.1'
 pod 'RFMarkdownTextView', '~> 1.4'
 pod 'UIViewController+HUD', '~> 1.0.0'
 pod 'WCAlertView', '~> 1.0.1'
+pod 'NSObject+Singleton', '~> 1.0.0'
 end
 
 target 'BlogTests' do

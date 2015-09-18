@@ -40,12 +40,12 @@
         return;
     }
     [self showHud];
-    [[UserService sharedUserService] login:_textAccount.text password:_textPassword.text delegate:self];
+    [[UserService singleton] login:_textAccount.text password:_textPassword.text delegate:self];
 }
 
 - (IBAction)logout:(id)sender {
     [self showHud];
-    [[UserService sharedUserService] logout:self];
+    [[UserService singleton] logout:self];
 }
 
 - (void)onSucceed:(NSDictionary*)response tag:(int)tag {

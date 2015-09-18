@@ -1,0 +1,6 @@
+framework module NSObject_Singleton {
+  umbrella header "NSObject+Singleton-umbrella.h"
+
+  export *
+  module * { export * }
+}
