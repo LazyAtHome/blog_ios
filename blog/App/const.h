@@ -11,7 +11,7 @@
 #define COLOR_MAIN [UIColor colorWithRed:0/255.0 green:0xb6/255.0 blue:0xd1/255.0 alpha:1.0];
 
 #define HTTP_PREFIX(x)                 "http://192.168.1.124:8888/blogserver"#x
-#define HTTP_BLOG_PREFIX(x)            "http://192.168.1.124:8888/blogserver-service"#x
+#define HTTP_BLOG_PREFIX(x)            "http://192.168.1.124:8888/blogserver"#x
 
 #define URL_REGISTER                    @HTTP_PREFIX(/users/reg)
 #define URL_LOGIN                       @HTTP_PREFIX(/users/login)
@@ -38,7 +38,7 @@
 
 #define TAG_NETQUERY_BLOG_GETALL        13
 
-#define TAG_NETQUERY_UPDATE             14
+#define TAG_NETQUERY_BLOG_UPDATE        14
 
 #define TAG_NETQUERY_DELETE             15
 

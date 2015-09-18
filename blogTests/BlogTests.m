@@ -52,8 +52,39 @@
     [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
 }
 
--(void)testPost {
+-(void)testBlogPost {
+    [[UserService singleton] login:@"peterwang" password:@"1234567" delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+    
     [[BlogService singleton] blogPost:@"Test Blog" content:@"Test Content" delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+}
+-(void)testBlogUpdate {
+    [[UserService singleton] login:@"peterwang" password:@"1234567" delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+    
+    [[BlogService singleton] blogUpdate:@"1" title:@"Test Blog Update" content:@"Test Content" delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+}
+
+-(void)testBlogDelete {
+    [[UserService singleton] login:@"peterwang" password:@"1234567" delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+    
+    [[BlogService singleton] blogPost:@"Test Blog" content:@"Test Content" delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+    
+    [[BlogService singleton] blogDelete:@"2" delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+}
+
+-(void)testBlogsGetAll {
+    [[BlogService singleton] blogsGetAll:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+}
+
+-(void)testBlogsGetById {
+    [[BlogService singleton] blogsGetById:@"1" delegate:self];
     [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
 }
 

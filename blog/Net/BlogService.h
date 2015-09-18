@@ -13,4 +13,12 @@
 
 -(void)blogPost:(NSString*)title content:(NSString*)content delegate:(id)delegate;
 
+-(void)blogUpdate:(NSString*)blogId title:(NSString*)title content:(NSString*)content delegate:(id)delegate;
+
+-(void)blogDelete:(NSString*)blogId delegate:(id)delegate;
+
+-(void)blogsGetAll:(id)delegate;
+
+-(void)blogsGetById:(NSString*)blogId delegate:(id)delegate;
+
 @end
