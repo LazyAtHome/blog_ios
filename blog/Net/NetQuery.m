@@ -19,6 +19,8 @@
 }
 
 - (void)httpGet:(NSString*)url params:(NSDictionary*)params tag:(int)tag{
+    NSLog(@"URL: %@", url);
+    NSLog( @"%@", params );
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
@@ -40,6 +42,8 @@
 }
 
 - (void)httpPost:(NSString*)url params:(NSDictionary*)params tag:(int)tag {
+    NSLog(@"URL: %@", url);
+    NSLog( @"%@", params );
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
@@ -61,6 +65,8 @@
 }
 
 - (void)httpPut:(NSString*)url params:(NSDictionary*)params tag:(int)tag {
+    NSLog(@"URL: %@", url);
+    NSLog( @"%@", params );
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager PUT:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
@@ -82,6 +88,8 @@
 }
 
 - (void)httpDelete:(NSString*)url params:(NSDictionary*)params tag:(int)tag {
+    NSLog(@"URL: %@", url);
+    NSLog( @"%@", params );
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager DELETE:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);

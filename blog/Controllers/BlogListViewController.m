@@ -8,12 +8,18 @@
 
 #import "BlogListViewController.h"
 #import "BlogPostViewController.h"
+#import "UIViewController+HUD.h"
 #import "BlogTableViewCell.h"
 #import "NetQuery.h"
+#import "BlogService.h"
+#import "Page+Blog.h"
+#import "Response.h"
+#import "Blog.h"
 
 @interface BlogListViewController ()<UITableViewDelegate,NetQueryDelegate>{
 
     IBOutlet UITableView* _tableView;
+    Page* blogPage;
 }
 
 @end
@@ -23,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [_tableView reloadData];
+    [self getBlogs];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,20 +39,38 @@
 
 - (void)onSucceed:(NSDictionary*)response tag:(int)tag {
     NSLog(@"JSON: %@", response);
+    [self hideHud];
+    Response* blogResponse = [[Response alloc]initWithDictionary:response];
+    if([blogResponse isSucceed]){
+        blogPage = [[Page alloc]initWithDictionary:blogResponse.data];
+    }else{
+        [self showAlert:blogResponse.responseMsg];
+    }
     
 }
 
 - (void)onFailed:(int)status errorMsg:(NSString*)errorMsg tag:(int)tag {
     NSLog(@"Error: %d, %@", status, errorMsg);
+    [self hideHud];
+}
+
+-(void)getBlogs {
+    [self showHud];
+    [[BlogService singleton]blogsGetAll:self];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return 10;
+    if(blogPage == nil || blogPage.dataList == nil){
+        return 0;
+    }
+    return [blogPage.dataList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BlogTableViewCell* cell = [[[NSBundle mainBundle]loadNibNamed:@"BlogTableViewCell" owner:self options:nil]objectAtIndex:0];
+    Blog* blog = [blogPage.dataList objectAtIndex:indexPath.row];
+    [cell.title setText:blog.title];
+    [cell.content setText:blog.content];
     return cell;
 }
 

@@ -30,8 +30,8 @@
                 <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             </tableViewCellContentView>
             <connections>
-                <outlet property="_content" destination="UNV-3O-CaD" id="Qe0-em-UVG"/>
-                <outlet property="_title" destination="Hc1-U2-ZeT" id="RZ3-bf-g8U"/>
+                <outlet property="content" destination="UNV-3O-CaD" id="crG-fA-7yY"/>
+                <outlet property="title" destination="Hc1-U2-ZeT" id="aAe-Vb-0Rx"/>
             </connections>
             <point key="canvasLocation" x="134" y="123.5"/>
         </tableViewCell>

@@ -9,8 +9,6 @@
 #import "BlogTableViewCell.h"
 
 @interface BlogTableViewCell (){
-    IBOutlet UILabel* _title;
-    IBOutlet UILabel* _content;
 }
 
 @end
@@ -19,8 +17,8 @@
 
 - (void)awakeFromNib {
     // Initialization code
-    [_title setText:NSLocalizedString(@"Title", nil) ];
-    [_content setText:NSLocalizedString(@"Summery", nil)];
+    [self.title setText:NSLocalizedString(@"Title", nil) ];
+    [self.content setText:NSLocalizedString(@"Summery", nil)];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

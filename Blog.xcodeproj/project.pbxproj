@@ -18,6 +18,9 @@
 		D0404A2A1BAAA4AA0072DF55 /* LDJValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D0404A291BAAA4AA0072DF55 /* LDJValidator.m */; };
 		D0404A2B1BAAB0000072DF55 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0404A2D1BAAB0000072DF55 /* LoginViewController.xib */; };
 		D0404A331BABD4070072DF55 /* BlogService.m in Sources */ = {isa = PBXBuildFile; fileRef = D0404A321BABD4070072DF55 /* BlogService.m */; };
+		D0404A361BABFB820072DF55 /* Blog.m in Sources */ = {isa = PBXBuildFile; fileRef = D0404A351BABFB820072DF55 /* Blog.m */; };
+		D0404A391BABFE180072DF55 /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = D0404A381BABFE180072DF55 /* Page.m */; };
+		D0404A3C1BAC07C00072DF55 /* Page+Blog.m in Sources */ = {isa = PBXBuildFile; fileRef = D0404A3B1BAC07C00072DF55 /* Page+Blog.m */; };
 		D063BAB81BA6A2F200B4FF14 /* home_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D063BAB41BA6A2F200B4FF14 /* home_highlight.png */; };
 		D063BAB91BA6A2F200B4FF14 /* home_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = D063BAB51BA6A2F200B4FF14 /* home_normal.png */; };
 		D063BABA1BA6A2F200B4FF14 /* my_highlight.png in Resources */ = {isa = PBXBuildFile; fileRef = D063BAB61BA6A2F200B4FF14 /* my_highlight.png */; };
@@ -74,6 +77,12 @@
 		D0404A301BAAB1940072DF55 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LoginViewController.xib; sourceTree = "<group>"; };
 		D0404A311BABD4070072DF55 /* BlogService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogService.h; sourceTree = "<group>"; };
 		D0404A321BABD4070072DF55 /* BlogService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogService.m; sourceTree = "<group>"; };
+		D0404A341BABFB820072DF55 /* Blog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blog.h; sourceTree = "<group>"; };
+		D0404A351BABFB820072DF55 /* Blog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Blog.m; sourceTree = "<group>"; };
+		D0404A371BABFE180072DF55 /* Page.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
+		D0404A381BABFE180072DF55 /* Page.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
+		D0404A3A1BAC07C00072DF55 /* Page+Blog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Page+Blog.h"; sourceTree = "<group>"; };
+		D0404A3B1BAC07C00072DF55 /* Page+Blog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Page+Blog.m"; sourceTree = "<group>"; };
 		D063BAB21BA6A1F800B4FF14 /* Const.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
 		D063BAB41BA6A2F200B4FF14 /* home_highlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_highlight.png; sourceTree = "<group>"; };
 		D063BAB51BA6A2F200B4FF14 /* home_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_normal.png; sourceTree = "<group>"; };
@@ -290,6 +299,12 @@
 				D0404A231BAA9D3F0072DF55 /* User.m */,
 				D0404A251BAA9D6A0072DF55 /* Response.h */,
 				D0404A261BAA9D6A0072DF55 /* Response.m */,
+				D0404A341BABFB820072DF55 /* Blog.h */,
+				D0404A351BABFB820072DF55 /* Blog.m */,
+				D0404A371BABFE180072DF55 /* Page.h */,
+				D0404A381BABFE180072DF55 /* Page.m */,
+				D0404A3A1BAC07C00072DF55 /* Page+Blog.h */,
+				D0404A3B1BAC07C00072DF55 /* Page+Blog.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -527,6 +542,7 @@
 				D063BABE1BA7ACDB00B4FF14 /* BaseViewController.m in Sources */,
 				D0404A211BAA9A190072DF55 /* Validator.m in Sources */,
 				D067C95A1BA006D200048D8B /* AppDelegate.m in Sources */,
+				D0404A361BABFB820072DF55 /* Blog.m in Sources */,
 				D01770D61BA177E6003BA551 /* LoginViewController.m in Sources */,
 				D0404A2A1BAAA4AA0072DF55 /* LDJValidator.m in Sources */,
 				D067C9851BA007A100048D8B /* BlogListViewController.m in Sources */,
@@ -535,6 +551,8 @@
 				D0B3DCF11BA2B3030056F0D9 /* BlogTableViewCell.m in Sources */,
 				D0404A331BABD4070072DF55 /* BlogService.m in Sources */,
 				D0A57A8E1BA9661300412A13 /* UserService.m in Sources */,
+				D0404A391BABFE180072DF55 /* Page.m in Sources */,
+				D0404A3C1BAC07C00072DF55 /* Page+Blog.m in Sources */,
 				D067C9571BA006D200048D8B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

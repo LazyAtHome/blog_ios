@@ -10,4 +10,7 @@
 
 @interface BlogTableViewCell : UITableViewCell
 
+@property IBOutlet UILabel* title;
+@property IBOutlet UILabel* content;
+
 @end

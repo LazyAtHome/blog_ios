@@ -15,6 +15,7 @@
 #import "Response.h"
 #import "User.h"
 #import "Const.h"
+#import "Page+Blog.h"
 
 @interface blogTests : XCTestCase<NetQueryDelegate>{
 }
@@ -97,8 +98,6 @@
 
 - (void)onSucceed:(NSDictionary*)response tag:(int)tag {
     
-    NSLog(@"JSON: %@", response);
-    
     Response* succResponse = [[Response alloc]initWithDictionary:response];
     if([succResponse isSucceed]){
         [self XCA_notify:XCTAsyncTestCaseStatusSucceeded];
@@ -113,7 +112,7 @@
             NSLog(@"Login Succeed");
             if(succResponse.data != nil){
                 User* user = [[User alloc]initWithDictionary:succResponse.data];
-                NSLog(user.userName);
+                NSLog(@"%@",user);
             }
             break;
         case TAG_NETQUERY_REGISTER:
@@ -124,6 +123,16 @@
             break;
         case TAG_NETQUERY_CURRENT:
             NSLog(@"Get Current User Succeed");
+            break;
+        case TAG_NETQUERY_BLOG_POST:
+            NSLog(@"Blog Post Succeed");
+            break;
+        case TAG_NETQUERY_BLOG_GETALL:
+            NSLog(@"Blog List Succeed");
+            if(succResponse.data != nil){
+                Page* page = [[Page alloc]initWithDictionary:succResponse.data];
+                NSLog(@"%@",page);
+            }
             break;
     }
     
