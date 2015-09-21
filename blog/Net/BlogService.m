@@ -7,7 +7,7 @@
 //
 
 #import "BlogService.h"
-#import "NetQuery.h"
+#import "NetQuery+LDJ.h"
 #import "Const.h"
 
 @implementation BlogService

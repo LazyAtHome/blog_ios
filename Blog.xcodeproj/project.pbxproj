@@ -10,6 +10,8 @@
 		0C14C62FC6AE497BE2199B40 /* Pods_BlogTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C291F9DF2D02D2D58B8304F /* Pods_BlogTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		8D91B8EEACF53773C9FEED82 /* Pods_blog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1779A4D2ADD1EDB9A4142437 /* Pods_blog.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C2C3530F7CD089CD9B3D62BE /* Pods_Blog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9517C9E890700CADD5D96B19 /* Pods_Blog.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D012CBEE1BAFAC780035BEEA /* NetQuery+LDJ.m in Sources */ = {isa = PBXBuildFile; fileRef = D012CBED1BAFAC780035BEEA /* NetQuery+LDJ.m */; };
+		D012CBF11BAFAD7D0035BEEA /* LoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D012CBF01BAFAD7D0035BEEA /* LoginManager.m */; };
 		D01770D11BA12EFD003BA551 /* NetQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = D01770D01BA12EFD003BA551 /* NetQuery.m */; };
 		D01770D61BA177E6003BA551 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D01770D51BA177E6003BA551 /* LoginViewController.m */; };
 		D0404A211BAA9A190072DF55 /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = D0404A201BAA9A190072DF55 /* Validator.m */; };
@@ -59,6 +61,10 @@
 		73024609DED514981595B09A /* Pods-BlogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlogTests/Pods-BlogTests.release.xcconfig"; sourceTree = "<group>"; };
 		761514F581689EBD3C611AEA /* Pods-blog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blog.release.xcconfig"; path = "Pods/Target Support Files/Pods-blog/Pods-blog.release.xcconfig"; sourceTree = "<group>"; };
 		9517C9E890700CADD5D96B19 /* Pods_Blog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Blog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D012CBEC1BAFAC780035BEEA /* NetQuery+LDJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetQuery+LDJ.h"; sourceTree = "<group>"; };
+		D012CBED1BAFAC780035BEEA /* NetQuery+LDJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetQuery+LDJ.m"; sourceTree = "<group>"; };
+		D012CBEF1BAFAD7D0035BEEA /* LoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginManager.h; path = Blog/App/LoginManager.h; sourceTree = SOURCE_ROOT; };
+		D012CBF01BAFAD7D0035BEEA /* LoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginManager.m; path = Blog/App/LoginManager.m; sourceTree = SOURCE_ROOT; };
 		D01770CF1BA12EFD003BA551 /* NetQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetQuery.h; sourceTree = "<group>"; };
 		D01770D01BA12EFD003BA551 /* NetQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetQuery.m; sourceTree = "<group>"; };
 		D01770D31BA1556B003BA551 /* NetQueryDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetQueryDelegate.h; sourceTree = "<group>"; };
@@ -172,6 +178,10 @@
 				D0A57A8D1BA9661300412A13 /* UserService.m */,
 				D0404A311BABD4070072DF55 /* BlogService.h */,
 				D0404A321BABD4070072DF55 /* BlogService.m */,
+				D012CBEC1BAFAC780035BEEA /* NetQuery+LDJ.h */,
+				D012CBED1BAFAC780035BEEA /* NetQuery+LDJ.m */,
+				D012CBEF1BAFAD7D0035BEEA /* LoginManager.h */,
+				D012CBF01BAFAD7D0035BEEA /* LoginManager.m */,
 			);
 			path = Net;
 			sourceTree = "<group>";
@@ -548,6 +558,8 @@
 				D067C9851BA007A100048D8B /* BlogListViewController.m in Sources */,
 				D0404A241BAA9D3F0072DF55 /* User.m in Sources */,
 				D01770D11BA12EFD003BA551 /* NetQuery.m in Sources */,
+				D012CBF11BAFAD7D0035BEEA /* LoginManager.m in Sources */,
+				D012CBEE1BAFAC780035BEEA /* NetQuery+LDJ.m in Sources */,
 				D0B3DCF11BA2B3030056F0D9 /* BlogTableViewCell.m in Sources */,
 				D0404A331BABD4070072DF55 /* BlogService.m in Sources */,
 				D0A57A8E1BA9661300412A13 /* UserService.m in Sources */,

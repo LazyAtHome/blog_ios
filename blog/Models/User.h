@@ -13,5 +13,6 @@
 -(instancetype)initWithDictionary:(NSDictionary*)dic;
 
 @property NSString* userName;
+@property NSString* accessToken;
 
 @end

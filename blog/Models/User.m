@@ -14,7 +14,8 @@
     if(dic == nil){
         return self;
     }
-    self.userName = [dic objectForKey:@"userName"];    
+    self.userName = [dic objectForKey:@"userName"];
+    self.accessToken = [dic objectForKey:@"accessToken"];
     return self;
 }
 

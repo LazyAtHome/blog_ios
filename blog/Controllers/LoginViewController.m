@@ -14,6 +14,7 @@
 #import "Const.h"
 #import "Response.h"
 #import "User.h"
+#import "LoginManager.h"
 
 @interface LoginViewController () {
     
@@ -58,6 +59,7 @@
            [self showAlert:NSLocalizedString(@"Login Succeed", nil)];
             User* user = [[User alloc]initWithDictionary:loginResponse.data];
             [labelUserName setText:user.userName];
+            [[LoginManager singleton] loginSucceed:user];
         }else{
             [self showAlert:loginResponse.responseMsg];
         }

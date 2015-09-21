@@ -16,6 +16,8 @@
 #import "User.h"
 #import "Const.h"
 #import "Page+Blog.h"
+#import "NetQuery+LDJ.h"
+#import "LoginManager.h"
 
 @interface blogTests : XCTestCase<NetQueryDelegate>{
 }
@@ -113,6 +115,7 @@
             if(succResponse.data != nil){
                 User* user = [[User alloc]initWithDictionary:succResponse.data];
                 NSLog(@"%@",user);
+                [[LoginManager singleton]loginSucceed:user];
             }
             break;
         case TAG_NETQUERY_REGISTER:

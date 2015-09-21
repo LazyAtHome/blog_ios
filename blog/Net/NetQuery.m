@@ -7,7 +7,6 @@
 //
 
 #import "NetQuery.h"
-#import <AFNetworking/AFNetworking.h>
 
 @implementation NetQuery
 @synthesize delegate = _delegate;
@@ -22,6 +21,9 @@
     NSLog(@"URL: %@", url);
     NSLog( @"%@", params );
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    if( [self respondsToSelector:@selector(addCommonHeaders:)]){
+        [self addCommonHeaders:manager];
+    }
     [manager GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         if(_delegate != nil && [_delegate respondsToSelector:@selector(onSucceed:tag:)]){
@@ -45,6 +47,9 @@
     NSLog(@"URL: %@", url);
     NSLog( @"%@", params );
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    if( [self respondsToSelector:@selector(addCommonHeaders:)]){
+        [self addCommonHeaders:manager];
+    }
     [manager POST:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         if(_delegate != nil && [_delegate respondsToSelector:@selector(onSucceed:tag:)]){
@@ -68,6 +73,9 @@
     NSLog(@"URL: %@", url);
     NSLog( @"%@", params );
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    if( [self respondsToSelector:@selector(addCommonHeaders:)]){
+        [self addCommonHeaders:manager];
+    }
     [manager PUT:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         if(_delegate != nil && [_delegate respondsToSelector:@selector(onSucceed:tag:)]){
@@ -91,6 +99,9 @@
     NSLog(@"URL: %@", url);
     NSLog( @"%@", params );
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    if( [self respondsToSelector:@selector(addCommonHeaders:)]){
+        [self addCommonHeaders:manager];
+    }
     [manager DELETE:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         if(_delegate != nil && [_delegate respondsToSelector:@selector(onSucceed:tag:)]){

@@ -10,6 +10,7 @@
 #define Blog_const_h
 #define COLOR_MAIN [UIColor colorWithRed:0/255.0 green:0xb6/255.0 blue:0xd1/255.0 alpha:1.0];
 
+#define HTTP_JASON                     "jason.tunnel.mobi";
 #define HTTP_PREFIX(x)                 "http://192.168.1.124:8888/blogserver"#x
 #define HTTP_BLOG_PREFIX(x)            "http://192.168.1.124:8888/blogserver"#x
 
