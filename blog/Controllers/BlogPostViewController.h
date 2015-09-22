@@ -15,5 +15,8 @@
 - (IBAction)preview:(id)sender;
 
 - (IBAction)post:(id)sender;
+
+- (void)setBlog:(Blog*)blog;
+
 @end
 

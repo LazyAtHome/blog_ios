@@ -24,11 +24,11 @@
 #define URL_LOGOUT                      @HTTP_PREFIX(/users/logout)
 #define URL_CURRENT                     @HTTP_PREFIX(/users/current)
 
-#define URL_BLOG_GETBYID                @HTTP_BLOG_PREFIX(/posts/31)
+#define URL_BLOG_GETBYID                @HTTP_BLOG_PREFIX(/posts)
 #define URL_BLOG_GETALL                 @HTTP_BLOG_PREFIX(/posts/all)
 #define URL_BLOG_POST                   @HTTP_BLOG_PREFIX(/posts)
-#define URL_BLOG_UPDATE                 @HTTP_BLOG_PREFIX(/posts/31)
-#define URL_BLOG_DELETE                 @HTTP_BLOG_PREFIX(/posts/43)
+#define URL_BLOG_UPDATE                 @HTTP_BLOG_PREFIX(/posts)
+#define URL_BLOG_DELETE                 @HTTP_BLOG_PREFIX(/posts)
 
 #else
 

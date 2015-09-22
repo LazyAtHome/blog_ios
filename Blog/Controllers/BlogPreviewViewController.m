@@ -42,7 +42,6 @@
     
     // Supply the markdown view with markdown to render
     [_markdownPreviewView setMarkdown:_markdownText];
-    _markdownPreviewView.hidden = YES;
     // Add the markdown view to a superview
     [[self markdownContainerView] addSubview:_markdownPreviewView];
 }

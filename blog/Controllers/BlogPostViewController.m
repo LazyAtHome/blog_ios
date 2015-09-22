@@ -14,7 +14,7 @@
 #import "BlogService.h"
 
 @interface BlogPostViewController (){
-    RFMarkdownTextView      *_markdownEditorView;
+    UITextView              *_markdownEditorView;
     NSString                *_markdownText;
     NSString                *_title;
     Blog                    *_blog;
@@ -44,10 +44,10 @@
 
 -(void)initMarkDownEditorView{
     CGRect markdownRect = CGRectMake(0.f, 0.f, self.markdownContainerView.frame.size.width, self.markdownContainerView.frame.size.height);
-    _markdownEditorView = [[RFMarkdownTextView alloc] initWithFrame:markdownRect];
+    _markdownEditorView = [[UITextView alloc] initWithFrame:markdownRect];
     
     // Supply the markdown view with markdown to render
-    //[markdownEditorView setText:markdownText];
+    [_markdownEditorView setText:_markdownText];
     
     // Add the markdown view to a superview
     [[self markdownContainerView] addSubview:_markdownEditorView];
@@ -67,7 +67,11 @@
 
 - (IBAction)post:(id)sender{
     [self showHudWithTitle:NSLocalizedString(@"Posting", nil)];
-    [[BlogService singleton]blogPost:self.textFieldTitle.text content:_markdownEditorView.text delegate:self];
+    if(_blog != nil && _blog.id != nil){
+        [[BlogService singleton]blogUpdate:[NSString stringWithFormat:@"%d",_blog.id.intValue] title:self.textFieldTitle.text content:_markdownEditorView.text delegate:self];
+    }else{
+        [[BlogService singleton]blogPost:self.textFieldTitle.text content:_markdownEditorView.text delegate:self];
+    }
 }
 
 - (void)onSucceed:(NSDictionary*)response tag:(int)tag {

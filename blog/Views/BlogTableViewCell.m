@@ -35,6 +35,7 @@
     if(blog == nil){
         return;
     }
+    _blog = blog;
     [self.title setText:blog.title];
     [self.content setText:blog.content];
     if(blog.version != nil){
@@ -45,7 +46,7 @@
     }
     self.btnUpdate.hidden = YES;
     if([[LoginManager singleton] getLoginedUser] != nil){
-        if([[[LoginManager singleton] getLoginedUser].id isEqualToNumber:blog.id]){
+        if([[[LoginManager singleton] getLoginedUser].id isEqualToNumber:blog.userId]){
             self.btnUpdate.hidden = NO;
         }
     }
@@ -53,7 +54,10 @@
 
 - (IBAction)edit:(id)sender {
     BlogPostViewController* postVC = [[BlogPostViewController alloc]init];
-    [[self.btnUpdate topMostController].navigationController pushViewController:postVC animated:YES];
+    if([[self.btnUpdate topMostController] isKindOfClass:[UINavigationController class]]){
+        [postVC setBlog:_blog];
+        [(UINavigationController*)[self.btnUpdate topMostController] pushViewController:postVC animated:YES];
+    }
 }
 
 @end
