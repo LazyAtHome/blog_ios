@@ -16,6 +16,8 @@
 #import "Page+Blog.h"
 #import "Response.h"
 #import "Blog.h"
+#import <MJRefresh/MJRefresh.h>
+#import <MJRefresh/UIScrollView+MJRefresh.h>
 
 @interface BlogListViewController ()<UITableViewDelegate,NetQueryDelegate>{
 
@@ -27,10 +29,13 @@
 
 @implementation BlogListViewController
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];// Do any additional setup after loading the view, typically from a nib.
+    [self setupRefresh:_tableView];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    [self getBlogs];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,12 +53,23 @@
     }else{
         [self showAlert:blogResponse.responseMsg];
     }
+    // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
+    [_tableView.header endRefreshing];
+    
+    // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
+    [_tableView.footer endRefreshing];
     
 }
 
 - (void)onFailed:(int)status errorMsg:(NSString*)errorMsg tag:(int)tag {
     NSLog(@"Error: %d, %@", status, errorMsg);
     [self hideHud];
+    
+    // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
+    [_tableView.header endRefreshing];
+    
+    // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
+    [_tableView.footer endRefreshing];
 }
 
 -(void)getBlogs {
@@ -90,4 +106,37 @@
     BlogPostViewController* postVC = [[BlogPostViewController alloc]initWithNibName:@"BlogPostViewController" bundle:(NSBundle *)nil];
     [self.navigationController pushViewController:postVC animated:YES];
 }
+
+
+/**
+ *  集成刷新控件
+ */
+- (void)setupRefresh:(UITableView*)tableView
+{
+    // 设置回调（一旦进入刷新状态，就调用target的action，也就是调用self的loadNewData方法）
+    tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRereshing)];
+    tableView.footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerRereshing)];
+    // 马上进入刷新状态
+    [tableView.header beginRefreshing];
+}
+
+#pragma mark 开始进入刷新状态
+- (void)headerRereshing
+{
+    // 2.刷新表格
+    [_tableView reloadData];
+    
+    [self getBlogs];
+}
+
+- (void)footerRereshing
+{
+    // 2.2秒后刷新表格UI
+    // 刷新表格
+    [_tableView reloadData];
+    
+    [self getBlogs];
+}
+
+
 @end

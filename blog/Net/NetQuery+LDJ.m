@@ -14,8 +14,8 @@
 
 - (void)addCommonHeaders:(AFHTTPRequestOperationManager*)manager {
     
-    //manager.requestSerializer = [AFJSONRequestSerializer serializer];
-    //[manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
     if([[LoginManager singleton ] isLogined]){
         
