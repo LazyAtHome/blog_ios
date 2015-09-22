@@ -11,19 +11,42 @@
 #define COLOR_MAIN [UIColor colorWithRed:0/255.0 green:0xb6/255.0 blue:0xd1/255.0 alpha:1.0];
 
 #define HTTP_JASON                     "jason.tunnel.mobi";
-#define HTTP_PREFIX(x)                 "http://192.168.1.124:8888/blogserver"#x
-#define HTTP_BLOG_PREFIX(x)            "http://192.168.1.124:8888/blogserver"#x
+
+#define MOCKUP
+
+#ifndef MOCKUP
+
+#define HTTP_PREFIX(x)                 "http://192.168.1.101:8888/blogserver"#x
+#define HTTP_BLOG_PREFIX(x)            "http://192.168.1.101:8888/blogserver"#x
 
 #define URL_REGISTER                    @HTTP_PREFIX(/users/reg)
 #define URL_LOGIN                       @HTTP_PREFIX(/users/login)
 #define URL_LOGOUT                      @HTTP_PREFIX(/users/logout)
 #define URL_CURRENT                     @HTTP_PREFIX(/users/current)
 
-#define URL_BLOG_GETBYID                @HTTP_BLOG_PREFIX(/posts)
+#define URL_BLOG_GETBYID                @HTTP_BLOG_PREFIX(/posts/31)
 #define URL_BLOG_GETALL                 @HTTP_BLOG_PREFIX(/posts/all)
 #define URL_BLOG_POST                   @HTTP_BLOG_PREFIX(/posts)
-#define URL_BLOG_UPDATE                 @HTTP_BLOG_PREFIX(/posts)
-#define URL_BLOG_DELETE                 @HTTP_BLOG_PREFIX(/posts)
+#define URL_BLOG_UPDATE                 @HTTP_BLOG_PREFIX(/posts/31)
+#define URL_BLOG_DELETE                 @HTTP_BLOG_PREFIX(/posts/43)
+
+#else
+
+#define HTTP_PREFIX(x)                 "https://raw.githubusercontent.com/LazyAtHome/blog_ios/master/blogTests"#x
+#define HTTP_BLOG_PREFIX(x)            "https://raw.githubusercontent.com/LazyAtHome/blog_ios/master/blogTests"#x
+
+#define URL_REGISTER                    @HTTP_PREFIX(/reg.json)
+#define URL_LOGIN                       @HTTP_PREFIX(/login.json)
+#define URL_LOGOUT                      @HTTP_PREFIX(/logout.json)
+#define URL_CURRENT                     @HTTP_PREFIX(/current.json)
+
+#define URL_BLOG_GETBYID                @HTTP_BLOG_PREFIX(/postbyid.json)
+#define URL_BLOG_GETALL                 @HTTP_BLOG_PREFIX(/postsall.json)
+#define URL_BLOG_POST                   @HTTP_BLOG_PREFIX(/post.json)
+#define URL_BLOG_UPDATE                 @HTTP_BLOG_PREFIX(/postupdate.json)
+#define URL_BLOG_DELETE                 @HTTP_BLOG_PREFIX(/postdelete.json)
+
+#endif
 
 #define TAG_NETQUERY_REGISTER           1
 

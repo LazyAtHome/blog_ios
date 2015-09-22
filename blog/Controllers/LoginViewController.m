@@ -65,6 +65,7 @@
         }
     }
     else if(tag == TAG_NETQUERY_LOGOUT){
+        [[LoginManager singleton]logout];
         Response* loginResponse = [[Response alloc]initWithDictionary:response];
         if([loginResponse isSucceed]){
             viewLogin.hidden = NO;

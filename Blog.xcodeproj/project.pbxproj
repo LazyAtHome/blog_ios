@@ -111,6 +111,14 @@
 		D067C9821BA007A100048D8B /* BlogListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogListViewController.m; sourceTree = "<group>"; };
 		D067C9831BA007A100048D8B /* BlogPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPostViewController.h; sourceTree = "<group>"; };
 		D067C9841BA007A100048D8B /* BlogPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPostViewController.m; sourceTree = "<group>"; };
+		D07900691BB0E891005CEB12 /* login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = login.json; path = BlogTests/login.json; sourceTree = SOURCE_ROOT; };
+		D079006A1BB0E9BD005CEB12 /* current.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = current.json; path = BlogTests/current.json; sourceTree = SOURCE_ROOT; };
+		D079006B1BB0E9FC005CEB12 /* logout.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = logout.json; path = BlogTests/logout.json; sourceTree = SOURCE_ROOT; };
+		D079006C1BB0ED52005CEB12 /* postall.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = postall.json; path = BlogTests/postall.json; sourceTree = SOURCE_ROOT; };
+		D079006D1BB0EDF3005CEB12 /* postbyid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = postbyid.json; path = BlogTests/postbyid.json; sourceTree = SOURCE_ROOT; };
+		D079006E1BB0EE73005CEB12 /* post.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = post.json; path = BlogTests/post.json; sourceTree = SOURCE_ROOT; };
+		D079006F1BB0EF65005CEB12 /* postupdate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = postupdate.json; path = BlogTests/postupdate.json; sourceTree = SOURCE_ROOT; };
+		D07900701BB0F016005CEB12 /* postdelete.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = postdelete.json; path = BlogTests/postdelete.json; sourceTree = SOURCE_ROOT; };
 		D0A57A8C1BA9661300412A13 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
 		D0A57A8D1BA9661300412A13 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
 		D0B3DCE11BA2AC070056F0D9 /* BlogListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogListViewController.xib; sourceTree = "<group>"; };
@@ -271,6 +279,14 @@
 			children = (
 				D067C9731BA006D200048D8B /* BlogTests.m */,
 				D067C9711BA006D200048D8B /* Supporting Files */,
+				D07900691BB0E891005CEB12 /* login.json */,
+				D079006A1BB0E9BD005CEB12 /* current.json */,
+				D079006B1BB0E9FC005CEB12 /* logout.json */,
+				D079006C1BB0ED52005CEB12 /* postall.json */,
+				D079006D1BB0EDF3005CEB12 /* postbyid.json */,
+				D079006E1BB0EE73005CEB12 /* post.json */,
+				D079006F1BB0EF65005CEB12 /* postupdate.json */,
+				D07900701BB0F016005CEB12 /* postdelete.json */,
 			);
 			name = BlogTests;
 			path = blogTests;
@@ -672,7 +688,7 @@
 					"\"${PODS_ROOT}/Bypass/Libraries/bypass-core/src\"",
 					"\"${PODS_ROOT}/XCAsyncTestCase\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -715,7 +731,7 @@
 					"\"${PODS_ROOT}/Bypass/Libraries/bypass-core/src\"",
 					"\"${PODS_ROOT}/XCAsyncTestCase\"",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -767,6 +783,7 @@
 			baseConfigurationReference = 1B48AB7251A5296E0EDB8639 /* Pods-BlogTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -794,6 +811,7 @@
 			baseConfigurationReference = 73024609DED514981595B09A /* Pods-BlogTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

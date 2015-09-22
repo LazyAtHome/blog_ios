@@ -9,6 +9,7 @@
 #import "NetQuery.h"
 
 @implementation NetQuery
+
 @synthesize delegate = _delegate;
 
 -(instancetype)initWithDelegate:(id)delegate{
