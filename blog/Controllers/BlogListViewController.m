@@ -8,6 +8,7 @@
 
 #import "BlogListViewController.h"
 #import "BlogPostViewController.h"
+#import "BlogPreviewViewController.h"
 #import "UIViewController+HUD.h"
 #import "BlogTableViewCell.h"
 #import "NetQuery.h"
@@ -70,19 +71,18 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BlogTableViewCell* cell = [[[NSBundle mainBundle]loadNibNamed:@"BlogTableViewCell" owner:self options:nil]objectAtIndex:0];
     Blog* blog = [blogPage.dataList objectAtIndex:indexPath.row];
-    [cell.title setText:blog.title];
-    [cell.content setText:blog.content];
+    [cell fill:blog];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 135;
+    return 160;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
-    BlogPostViewController* postVC = [[BlogPostViewController alloc]initWithNibName:@"BlogPostViewController" bundle:(NSBundle *)nil];
+    BlogPreviewViewController* postVC = [[BlogPreviewViewController alloc]initWithNibName:@"BlogPreviewViewController" bundle:(NSBundle *)nil];
     Blog* blog = [blogPage.dataList objectAtIndex:indexPath.row];
-    [postVC showPreviewOnly:blog];
+    [postVC setBlog:blog];
     [self.navigationController pushViewController:postVC animated:YES];
 }
 

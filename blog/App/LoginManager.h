@@ -15,4 +15,5 @@
 -(void)logout;
 -(Boolean)isLogined;
 -(NSString*)getAcessToken;
+-(User*)getLoginedUser;
 @end

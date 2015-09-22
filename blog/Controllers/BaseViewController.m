@@ -85,4 +85,22 @@
 -(void)back{
     [[self navigationController]popViewControllerAnimated:YES];
 }
+
+- (void)printViewHierarchy:(UIView *)superView
+{
+    static uint level = 0;
+    for(uint i = 0; i < level; i++){
+        printf("\t");
+    }
+    
+    const char *className = NSStringFromClass([superView class]).UTF8String;
+    const char *frame = NSStringFromCGRect(superView.frame).UTF8String;
+    printf("%s:%s\n", className, frame);
+    
+    ++level;
+    for(UIView *view in superView.subviews){
+        [self printViewHierarchy:view];
+    }
+    --level;
+}
 @end

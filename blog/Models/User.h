@@ -14,5 +14,6 @@
 
 @property NSString* userName;
 @property NSString* accessToken;
+@property NSNumber* id;
 
 @end

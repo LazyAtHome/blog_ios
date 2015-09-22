@@ -16,6 +16,15 @@
     }
     self.title = [dic objectForKey:@"title"];
     self.content = [dic objectForKey:@"content"];
+    self.id = [dic objectForKey:@"id"];
+    self.userId = [dic objectForKey:@"userId"];
+    self.version = [dic objectForKey:@"version"];
+    self.viewCount = [dic objectForKey:@"viewCount"];
+    
+    self.createBy = [dic objectForKey:@"createBy"];
+    self.createDate = [dic objectForKey:@"createDate"];
+    self.updateBy = [dic objectForKey:@"updateBy"];
+    self.updateDate = [dic objectForKey:@"updateDate"];
     return self;
 }
 

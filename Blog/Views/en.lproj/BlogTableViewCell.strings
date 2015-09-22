@@ -1,1 +1,16 @@
 
+
+/* Class = "UIButton"; normalTitle = "修改"; ObjectID = "AB3-d0-LVs"; */
+"AB3-d0-LVs.normalTitle" = "Update";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "G2N-lM-45y"; */
+"G2N-lM-45y.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "GOf-GN-sB1"; */
+"GOf-GN-sB1.text" = "0";
+
+/* Class = "UILabel"; text = "编辑："; ObjectID = "L3L-XH-Pss"; */
+"L3L-XH-Pss.text" = "Update:";
+
+/* Class = "UILabel"; text = "阅读："; ObjectID = "aqM-BZ-Fo0"; */
+"aqM-BZ-Fo0.text" = "Read:";

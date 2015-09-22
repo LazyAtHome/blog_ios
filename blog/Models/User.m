@@ -16,6 +16,7 @@
     }
     self.userName = [dic objectForKey:@"userName"];
     self.accessToken = [dic objectForKey:@"accessToken"];
+    self.id = [dic objectForKey:@"id"];
     return self;
 }
 

@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="btnPreview" destination="ViC-UL-Wmd" id="vUn-Df-80o"/>
                 <outlet property="markdownContainerView" destination="uWC-Gz-DfW" id="X5q-wU-BoP"/>
+                <outlet property="textFieldTitle" destination="Vf0-DX-ya7" id="bjV-d3-qHl"/>
                 <outlet property="view" destination="sdP-bv-0mF" id="Ma6-QQ-bM5"/>
             </connections>
         </placeholder>
@@ -30,7 +31,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ViC-UL-Wmd">
-                            <rect key="frame" x="305" y="27" width="56" height="30"/>
+                            <rect key="frame" x="249" y="27" width="56" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="56" id="l8g-wK-DFL"/>
                             </constraints>
@@ -40,6 +41,21 @@
                             </state>
                             <connections>
                                 <action selector="preview:" destination="-1" eventType="touchUpInside" id="Z0P-wl-tfi"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UnW-IS-e0b">
+                            <rect key="frame" x="305" y="27" width="56" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="56" id="1Sq-BD-brN"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="56" id="ejK-cq-Gzk"/>
+                                <constraint firstAttribute="height" constant="30" id="oIL-J6-3af"/>
+                            </constraints>
+                            <state key="normal" title="Post">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="post:" destination="-1" eventType="touchUpInside" id="4fg-Vf-Bog"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5a-DV-8jA">
@@ -61,19 +77,48 @@
                         <constraint firstItem="QE0-pE-EmF" firstAttribute="leading" secondItem="0E6-sV-GGz" secondAttribute="leading" constant="40" id="O7o-40-o54"/>
                         <constraint firstItem="ViC-UL-Wmd" firstAttribute="top" secondItem="0E6-sV-GGz" secondAttribute="top" constant="27" id="deQ-CO-fgG"/>
                         <constraint firstAttribute="bottom" secondItem="ViC-UL-Wmd" secondAttribute="bottom" constant="7" id="fhZ-xR-7C5"/>
-                        <constraint firstAttribute="trailing" secondItem="ViC-UL-Wmd" secondAttribute="trailing" constant="14" id="n2I-k0-sgH"/>
+                        <constraint firstItem="UnW-IS-e0b" firstAttribute="top" secondItem="0E6-sV-GGz" secondAttribute="top" constant="27" id="gJm-1C-cJw"/>
+                        <constraint firstAttribute="trailing" secondItem="UnW-IS-e0b" secondAttribute="trailing" constant="14" id="lFZ-pq-JZl"/>
+                        <constraint firstAttribute="trailing" secondItem="ViC-UL-Wmd" secondAttribute="trailing" constant="70" id="n2I-k0-sgH"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uWC-Gz-DfW">
-                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSR-ou-RI6">
+                    <rect key="frame" x="0.0" y="64" width="375" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vf0-DX-ya7">
+                            <rect key="frame" x="8" y="10" width="359" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="e5a-ey-Slz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Vf0-DX-ya7" firstAttribute="top" secondItem="DSR-ou-RI6" secondAttribute="top" constant="10" id="2FZ-IM-ezm"/>
+                        <constraint firstItem="Vf0-DX-ya7" firstAttribute="leading" secondItem="DSR-ou-RI6" secondAttribute="leading" constant="8" id="9Mo-p1-IPt"/>
+                        <constraint firstAttribute="trailing" secondItem="Vf0-DX-ya7" secondAttribute="trailing" constant="8" id="Xr4-wL-FO2"/>
+                        <constraint firstAttribute="height" constant="50" id="hs3-Wd-sy7"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uWC-Gz-DfW">
+                    <rect key="frame" x="10" y="114" width="355" height="553"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="0E6-sV-GGz" firstAttribute="leading" secondItem="sdP-bv-0mF" secondAttribute="leading" id="CGn-dQ-iGo"/>
+                <constraint firstAttribute="trailing" secondItem="uWC-Gz-DfW" secondAttribute="trailing" constant="10" id="DWc-nN-ndP"/>
                 <constraint firstItem="0E6-sV-GGz" firstAttribute="top" secondItem="sdP-bv-0mF" secondAttribute="top" id="URr-75-h7z"/>
+                <constraint firstItem="uWC-Gz-DfW" firstAttribute="top" secondItem="0E6-sV-GGz" secondAttribute="bottom" constant="50" id="WNI-bK-7Lg"/>
+                <constraint firstItem="uWC-Gz-DfW" firstAttribute="leading" secondItem="sdP-bv-0mF" secondAttribute="leading" constant="10" id="aee-qG-zy7"/>
+                <constraint firstAttribute="bottom" secondItem="uWC-Gz-DfW" secondAttribute="bottom" id="bBx-Fc-fez"/>
+                <constraint firstItem="DSR-ou-RI6" firstAttribute="leading" secondItem="sdP-bv-0mF" secondAttribute="leading" id="cLd-s9-WFI"/>
                 <constraint firstAttribute="trailing" secondItem="0E6-sV-GGz" secondAttribute="trailing" id="m3o-b4-rKx"/>
+                <constraint firstAttribute="trailing" secondItem="DSR-ou-RI6" secondAttribute="trailing" id="mV5-2G-tG1"/>
+                <constraint firstItem="DSR-ou-RI6" firstAttribute="top" secondItem="0E6-sV-GGz" secondAttribute="bottom" id="yeH-bV-O9o"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="279.5" y="181.5"/>

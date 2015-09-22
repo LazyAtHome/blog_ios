@@ -7,10 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Blog.h"
 
 @interface BlogTableViewCell : UITableViewCell
 
 @property IBOutlet UILabel* title;
 @property IBOutlet UITextView* content;
+
+
+@property IBOutlet UILabel* updateCount;
+@property IBOutlet UILabel* readCount;
+@property IBOutlet UIButton* btnUpdate;
+
+-(void)fill:(Blog*)blog;
+- (IBAction)edit:(id)sender;
 
 @end

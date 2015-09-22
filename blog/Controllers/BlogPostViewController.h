@@ -13,7 +13,7 @@
 @interface BlogPostViewController : BaseViewController
 
 - (IBAction)preview:(id)sender;
-- (void)showPreviewOnly:(Blog*)blog;
 
+- (IBAction)post:(id)sender;
 @end
 

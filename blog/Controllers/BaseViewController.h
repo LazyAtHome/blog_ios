@@ -16,5 +16,5 @@
 
 - (void)showAlert:(NSString*)alertMsg;
 - (IBAction) back;
-
+- (void)printViewHierarchy:(UIView *)superView;
 @end

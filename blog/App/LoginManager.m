@@ -35,4 +35,8 @@
 -(NSString*)getAcessToken{
     return _accessToken;
 }
+
+-(User*)getLoginedUser{
+    return _user;
+}
 @end
