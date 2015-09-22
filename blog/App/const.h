@@ -12,7 +12,7 @@
 
 #define HTTP_JASON                     "jason.tunnel.mobi";
 
-#define MOCKUP
+#undef MOCKUP
 
 #ifndef MOCKUP
 
@@ -32,8 +32,8 @@
 
 #else
 
-#define HTTP_PREFIX(x)                 "https://raw.githubusercontent.com/LazyAtHome/blog_ios/master/blogTests"#x
-#define HTTP_BLOG_PREFIX(x)            "https://raw.githubusercontent.com/LazyAtHome/blog_ios/master/blogTests"#x
+#define HTTP_PREFIX(x)                 "https://raw.githubusercontent.com/LazyAtHome/blog_ios/feature/Blog_PostAPI/BlogTests"#x
+#define HTTP_BLOG_PREFIX(x)            "https://raw.githubusercontent.com/LazyAtHome/blog_ios/feature/Blog_PostAPI/BlogTests"#x
 
 #define URL_REGISTER                    @HTTP_PREFIX(/reg.json)
 #define URL_LOGIN                       @HTTP_PREFIX(/login.json)

@@ -11,9 +11,10 @@
 #import "RFMarkdownTextView.h"
 
 @interface BlogPostViewController (){
-    BPMarkdownView *markdownPreviewView;
-    RFMarkdownTextView *markdownEditorView;
-    NSString* markdownText;
+    BPMarkdownView          *_markdownPreviewView;
+    RFMarkdownTextView      *_markdownEditorView;
+    NSString                *_markdownText;
+    Blog                    *_blog;
 }
 @property (weak, nonatomic) IBOutlet UIView *markdownContainerView;
 @property (weak, nonatomic) IBOutlet UIButton *btnPreview;
@@ -25,9 +26,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    markdownText = @"";
+    if(_markdownText == nil){
+        _markdownText = @"";
+    }
     [self initRFMarkDownView];
     [self initBPMarkDownView];
+    
+    if(_blog != nil){
+        [self showPreviewOnly:_blog];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,39 +44,50 @@
 
 -(void)initBPMarkDownView{
     CGRect markdownRect = CGRectMake(0.f, 0.f, self.markdownContainerView.frame.size.width, self.markdownContainerView.frame.size.height);
-    markdownPreviewView = [[BPMarkdownView alloc] initWithFrame:markdownRect];
+    _markdownPreviewView = [[BPMarkdownView alloc] initWithFrame:markdownRect];
     
     // Obtain some markdown
     
     // Supply the markdown view with markdown to render
-    [markdownPreviewView setMarkdown:markdownText];
-    markdownPreviewView.hidden = YES;
+    [_markdownPreviewView setMarkdown:_markdownText];
+    _markdownPreviewView.hidden = YES;
     // Add the markdown view to a superview
-    [[self markdownContainerView] addSubview:markdownPreviewView];
+    [[self markdownContainerView] addSubview:_markdownPreviewView];
 }
 
 -(void)initRFMarkDownView{
     CGRect markdownRect = CGRectMake(0.f, 0.f, self.markdownContainerView.frame.size.width, self.markdownContainerView.frame.size.height);
-    markdownEditorView = [[RFMarkdownTextView alloc] initWithFrame:markdownRect];
+    _markdownEditorView = [[RFMarkdownTextView alloc] initWithFrame:markdownRect];
     
     // Supply the markdown view with markdown to render
     //[markdownEditorView setText:markdownText];
     
     // Add the markdown view to a superview
-    [[self markdownContainerView] addSubview:markdownEditorView];
+    [[self markdownContainerView] addSubview:_markdownEditorView];
 }
 - (IBAction)preview:(id)sender {
-    if(markdownPreviewView.hidden){
-        markdownText = markdownEditorView.text;
-        [markdownPreviewView setMarkdown:markdownText];
-        markdownPreviewView.hidden = NO;
-        markdownEditorView.hidden = YES;
-        [markdownPreviewView layoutSubviews];
+    if(_markdownPreviewView.hidden){
+        _markdownText = _markdownEditorView.text;
+        [_markdownPreviewView setMarkdown:_markdownText];
+        _markdownPreviewView.hidden = NO;
+        _markdownEditorView.hidden = YES;
+        [_markdownPreviewView layoutSubviews];
         [self.btnPreview setTitle:NSLocalizedString(@"Write", nil) forState:UIControlStateNormal];
     }else{
-        markdownPreviewView.hidden = YES;
-        markdownEditorView.hidden = NO;
+        _markdownPreviewView.hidden = YES;
+        _markdownEditorView.hidden = NO;
         [self.btnPreview setTitle:NSLocalizedString(@"Preview", nil) forState:UIControlStateNormal];
     }
+}
+
+- (void)showPreviewOnly:(Blog*)blog{
+    _blog = blog;
+    _markdownText = blog.content;
+    
+    [_markdownPreviewView setMarkdown:_markdownText];
+    _markdownPreviewView.hidden = NO;
+    _markdownEditorView.hidden = YES;
+    self.btnPreview.hidden = YES;
+    [_markdownPreviewView layoutSubviews];
 }
 @end

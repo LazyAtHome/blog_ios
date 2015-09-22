@@ -11,6 +11,6 @@
 @interface BlogTableViewCell : UITableViewCell
 
 @property IBOutlet UILabel* title;
-@property IBOutlet UILabel* content;
+@property IBOutlet UITextView* content;
 
 @end

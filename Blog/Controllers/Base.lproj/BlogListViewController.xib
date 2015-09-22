@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14C2055" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlogListViewController">
@@ -33,7 +33,7 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="6R6-Sb-ZKX"/>
                             </constraints>
-                            <state key="normal" title="Write Blog">
+                            <state key="normal">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -41,16 +41,28 @@
                                 <action selector="gotoPost:" destination="-1" eventType="touchUpInside" id="vEo-IH-d7r"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write Blog" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWq-VB-DiY">
+                            <rect key="frame" x="290" y="27" width="80" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="1UY-bY-HDR"/>
+                                <constraint firstAttribute="width" constant="80" id="N8W-md-pCK"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.71372549019999998" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="DOx-KX-7my"/>
+                        <constraint firstAttribute="trailing" secondItem="WWq-VB-DiY" secondAttribute="trailing" constant="5" id="HTr-w0-lWM"/>
                         <constraint firstAttribute="trailing" secondItem="WK6-dH-XY8" secondAttribute="trailing" constant="45" id="Mkw-ow-j09"/>
                         <constraint firstAttribute="height" constant="64" id="RW9-QG-aJK"/>
                         <constraint firstAttribute="bottom" secondItem="KaD-qb-IIr" secondAttribute="bottom" constant="7" id="UzU-nv-578"/>
                         <constraint firstAttribute="trailing" secondItem="KaD-qb-IIr" secondAttribute="trailing" constant="21" id="cGz-Kr-ise"/>
                         <constraint firstItem="WK6-dH-XY8" firstAttribute="leading" secondItem="cz9-IC-AYq" secondAttribute="leading" constant="40" id="dJB-nT-5sc"/>
                         <constraint firstItem="KaD-qb-IIr" firstAttribute="top" secondItem="cz9-IC-AYq" secondAttribute="top" constant="27" id="lf5-Ds-5Ol"/>
+                        <constraint firstItem="WWq-VB-DiY" firstAttribute="top" secondItem="cz9-IC-AYq" secondAttribute="top" constant="27" id="u6o-22-MWn"/>
                         <constraint firstItem="WK6-dH-XY8" firstAttribute="top" secondItem="cz9-IC-AYq" secondAttribute="top" constant="20" id="uOU-hV-JPZ"/>
                     </constraints>
                 </view>

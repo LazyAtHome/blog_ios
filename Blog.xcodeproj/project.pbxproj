@@ -36,12 +36,12 @@
 		D067C9741BA006D200048D8B /* BlogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9731BA006D200048D8B /* BlogTests.m */; };
 		D067C9851BA007A100048D8B /* BlogListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9821BA007A100048D8B /* BlogListViewController.m */; };
 		D067C9861BA007A100048D8B /* BlogPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D067C9841BA007A100048D8B /* BlogPostViewController.m */; };
+		D08A2F271BB104EB00B6F49F /* BlogListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08A2F291BB104EB00B6F49F /* BlogListViewController.xib */; };
+		D08A2F311BB107F800B6F49F /* BlogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08A2F331BB107F800B6F49F /* BlogTableViewCell.xib */; };
+		D08A2F391BB10A7300B6F49F /* BlogPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08A2F3B1BB10A7300B6F49F /* BlogPostViewController.xib */; };
 		D0A57A8E1BA9661300412A13 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A57A8D1BA9661300412A13 /* UserService.m */; };
-		D0B3DCE21BA2AC070056F0D9 /* BlogListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCE11BA2AC070056F0D9 /* BlogListViewController.xib */; };
-		D0B3DCE41BA2AC3D0056F0D9 /* BlogPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCE31BA2AC3D0056F0D9 /* BlogPostViewController.xib */; };
 		D0B3DCE71BA2AF0F0056F0D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCE91BA2AF0F0056F0D9 /* Localizable.strings */; };
 		D0B3DCF11BA2B3030056F0D9 /* BlogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B3DCEF1BA2B3030056F0D9 /* BlogTableViewCell.m */; };
-		D0B3DCF21BA2B3030056F0D9 /* BlogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCF01BA2B3030056F0D9 /* BlogTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +78,6 @@
 		D0404A261BAA9D6A0072DF55 /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
 		D0404A281BAAA4AA0072DF55 /* LDJValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDJValidator.h; sourceTree = "<group>"; };
 		D0404A291BAAA4AA0072DF55 /* LDJValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDJValidator.m; sourceTree = "<group>"; };
-		D0404A2C1BAAB0000072DF55 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/LoginViewController.xib"; sourceTree = "<group>"; };
 		D0404A2F1BAAB18C0072DF55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoginViewController.xib; sourceTree = "<group>"; };
 		D0404A301BAAB1940072DF55 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LoginViewController.xib; sourceTree = "<group>"; };
 		D0404A311BABD4070072DF55 /* BlogService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogService.h; sourceTree = "<group>"; };
@@ -119,10 +118,18 @@
 		D079006E1BB0EE73005CEB12 /* post.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = post.json; path = BlogTests/post.json; sourceTree = SOURCE_ROOT; };
 		D079006F1BB0EF65005CEB12 /* postupdate.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = postupdate.json; path = BlogTests/postupdate.json; sourceTree = SOURCE_ROOT; };
 		D07900701BB0F016005CEB12 /* postdelete.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = postdelete.json; path = BlogTests/postdelete.json; sourceTree = SOURCE_ROOT; };
+		D08A2F2C1BB1055500B6F49F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LoginViewController.strings"; sourceTree = "<group>"; };
+		D08A2F2F1BB107A200B6F49F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BlogListViewController.xib; sourceTree = "<group>"; };
+		D08A2F301BB107B500B6F49F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BlogListViewController.strings"; sourceTree = "<group>"; };
+		D08A2F321BB107F800B6F49F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BlogTableViewCell.xib; sourceTree = "<group>"; };
+		D08A2F351BB107FA00B6F49F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BlogTableViewCell.strings; sourceTree = "<group>"; };
+		D08A2F371BB107FE00B6F49F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BlogTableViewCell.strings"; sourceTree = "<group>"; };
+		D08A2F381BB1083900B6F49F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BlogListViewController.strings; sourceTree = "<group>"; };
+		D08A2F3A1BB10A7300B6F49F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BlogPostViewController.xib; sourceTree = "<group>"; };
+		D08A2F3D1BB10B4800B6F49F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BlogPostViewController.strings; sourceTree = "<group>"; };
+		D08A2F3F1BB10B4F00B6F49F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BlogPostViewController.strings"; sourceTree = "<group>"; };
 		D0A57A8C1BA9661300412A13 /* UserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserService.h; sourceTree = "<group>"; };
 		D0A57A8D1BA9661300412A13 /* UserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserService.m; sourceTree = "<group>"; };
-		D0B3DCE11BA2AC070056F0D9 /* BlogListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogListViewController.xib; sourceTree = "<group>"; };
-		D0B3DCE31BA2AC3D0056F0D9 /* BlogPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogPostViewController.xib; sourceTree = "<group>"; };
 		D0B3DCE81BA2AF0F0056F0D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0B3DCEA1BA2B0560056F0D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D0B3DCEB1BA2B08B0056F0D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -130,7 +137,6 @@
 		D0B3DCED1BA2B08B0056F0D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D0B3DCEE1BA2B3030056F0D9 /* BlogTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogTableViewCell.h; sourceTree = "<group>"; };
 		D0B3DCEF1BA2B3030056F0D9 /* BlogTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogTableViewCell.m; sourceTree = "<group>"; };
-		D0B3DCF01BA2B3030056F0D9 /* BlogTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlogTableViewCell.xib; sourceTree = "<group>"; };
 		E15670437B00B1B771FE2B1D /* Pods-blog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-blog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-blog/Pods-blog.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -307,10 +313,10 @@
 				D063BABD1BA7ACDB00B4FF14 /* BaseViewController.m */,
 				D067C9811BA007A100048D8B /* BlogListViewController.h */,
 				D067C9821BA007A100048D8B /* BlogListViewController.m */,
-				D0B3DCE11BA2AC070056F0D9 /* BlogListViewController.xib */,
+				D08A2F291BB104EB00B6F49F /* BlogListViewController.xib */,
 				D067C9831BA007A100048D8B /* BlogPostViewController.h */,
 				D067C9841BA007A100048D8B /* BlogPostViewController.m */,
-				D0B3DCE31BA2AC3D0056F0D9 /* BlogPostViewController.xib */,
+				D08A2F3B1BB10A7300B6F49F /* BlogPostViewController.xib */,
 				D01770D41BA177E6003BA551 /* LoginViewController.h */,
 				D01770D51BA177E6003BA551 /* LoginViewController.m */,
 				D0404A2D1BAAB0000072DF55 /* LoginViewController.xib */,
@@ -348,7 +354,7 @@
 				D067C9611BA006D200048D8B /* Main.storyboard */,
 				D0B3DCEE1BA2B3030056F0D9 /* BlogTableViewCell.h */,
 				D0B3DCEF1BA2B3030056F0D9 /* BlogTableViewCell.m */,
-				D0B3DCF01BA2B3030056F0D9 /* BlogTableViewCell.xib */,
+				D08A2F331BB107F800B6F49F /* BlogTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -441,15 +447,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0B3DCE41BA2AC3D0056F0D9 /* BlogPostViewController.xib in Resources */,
+				D08A2F391BB10A7300B6F49F /* BlogPostViewController.xib in Resources */,
 				D0404A2B1BAAB0000072DF55 /* LoginViewController.xib in Resources */,
 				D063BABB1BA6A2F200B4FF14 /* my_normal.png in Resources */,
 				D063BAB81BA6A2F200B4FF14 /* home_highlight.png in Resources */,
 				D067C9631BA006D200048D8B /* Main.storyboard in Resources */,
 				D063BABA1BA6A2F200B4FF14 /* my_highlight.png in Resources */,
-				D0B3DCE21BA2AC070056F0D9 /* BlogListViewController.xib in Resources */,
+				D08A2F271BB104EB00B6F49F /* BlogListViewController.xib in Resources */,
 				D067C9681BA006D200048D8B /* LaunchScreen.xib in Resources */,
-				D0B3DCF21BA2B3030056F0D9 /* BlogTableViewCell.xib in Resources */,
+				D08A2F311BB107F800B6F49F /* BlogTableViewCell.xib in Resources */,
 				D063BAB91BA6A2F200B4FF14 /* home_normal.png in Resources */,
 				D067C9651BA006D200048D8B /* Images.xcassets in Resources */,
 				D0B3DCE71BA2AF0F0056F0D9 /* Localizable.strings in Resources */,
@@ -607,9 +613,9 @@
 		D0404A2D1BAAB0000072DF55 /* LoginViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D0404A2C1BAAB0000072DF55 /* zh-Hans */,
 				D0404A2F1BAAB18C0072DF55 /* Base */,
 				D0404A301BAAB1940072DF55 /* en */,
+				D08A2F2C1BB1055500B6F49F /* zh-Hans */,
 			);
 			name = LoginViewController.xib;
 			sourceTree = "<group>";
@@ -631,6 +637,36 @@
 				D0B3DCEC1BA2B08B0056F0D9 /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		D08A2F291BB104EB00B6F49F /* BlogListViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D08A2F2F1BB107A200B6F49F /* Base */,
+				D08A2F301BB107B500B6F49F /* zh-Hans */,
+				D08A2F381BB1083900B6F49F /* en */,
+			);
+			name = BlogListViewController.xib;
+			sourceTree = "<group>";
+		};
+		D08A2F331BB107F800B6F49F /* BlogTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D08A2F321BB107F800B6F49F /* Base */,
+				D08A2F351BB107FA00B6F49F /* en */,
+				D08A2F371BB107FE00B6F49F /* zh-Hans */,
+			);
+			name = BlogTableViewCell.xib;
+			sourceTree = "<group>";
+		};
+		D08A2F3B1BB10A7300B6F49F /* BlogPostViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D08A2F3A1BB10A7300B6F49F /* Base */,
+				D08A2F3D1BB10B4800B6F49F /* en */,
+				D08A2F3F1BB10B4F00B6F49F /* zh-Hans */,
+			);
+			name = BlogPostViewController.xib;
 			sourceTree = "<group>";
 		};
 		D0B3DCE91BA2AF0F0056F0D9 /* Localizable.strings */ = {
@@ -783,7 +819,7 @@
 			baseConfigurationReference = 1B48AB7251A5296E0EDB8639 /* Pods-BlogTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -811,7 +847,7 @@
 			baseConfigurationReference = 73024609DED514981595B09A /* Pods-BlogTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

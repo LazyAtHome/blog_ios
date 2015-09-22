@@ -43,6 +43,7 @@
     Response* blogResponse = [[Response alloc]initWithDictionary:response];
     if([blogResponse isSucceed]){
         blogPage = [[Page alloc]initWithDictionary:blogResponse.data];
+        [_tableView reloadData];
     }else{
         [self showAlert:blogResponse.responseMsg];
     }
@@ -76,6 +77,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 135;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    BlogPostViewController* postVC = [[BlogPostViewController alloc]initWithNibName:@"BlogPostViewController" bundle:(NSBundle *)nil];
+    Blog* blog = [blogPage.dataList objectAtIndex:indexPath.row];
+    [postVC showPreviewOnly:blog];
+    [self.navigationController pushViewController:postVC animated:YES];
 }
 
 - (IBAction)gotoPost:(id)sender {

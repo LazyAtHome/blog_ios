@@ -13,7 +13,10 @@
 @implementation NetQuery(LDJ)
 
 - (void)addCommonHeaders:(AFHTTPRequestOperationManager*)manager {
-    if([[LoginManager singleton ] isLogined])
-    [manager.requestSerializer setValue:[[LoginManager singleton] getAcessToken] forHTTPHeaderField:@"accessToken"];
+    
+    if([[LoginManager singleton ] isLogined]){
+        
+        [manager.requestSerializer setValue:[[LoginManager singleton] getAcessToken] forHTTPHeaderField:@"accessToken"];
+    }
 }
 @end
