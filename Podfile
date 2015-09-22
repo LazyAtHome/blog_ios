@@ -10,6 +10,7 @@ pod 'UIViewController+HUD', '~> 1.0.0'
 pod 'WCAlertView', '~> 1.0.1'
 pod 'NSObject+Singleton', '~> 1.0.0'
 pod 'IQKeyboardManager', '~> 3.3.1'
+pod 'MJRefresh', '~> 2.4.10'
 end
 
 target 'BlogTests' do
