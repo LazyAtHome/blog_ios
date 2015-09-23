@@ -14,12 +14,16 @@
 @property IBOutlet UILabel* title;
 @property IBOutlet UITextView* content;
 
-
 @property IBOutlet UILabel* updateCount;
 @property IBOutlet UILabel* readCount;
 @property IBOutlet UIButton* btnUpdate;
 
+@property IBOutlet UILabel* createBy;
+@property IBOutlet UILabel* createDate;
+@property IBOutlet UIButton* btnDelete;
+
 -(void)fill:(Blog*)blog;
 - (IBAction)edit:(id)sender;
+- (IBAction)delete:(id)sender;
 
 @end

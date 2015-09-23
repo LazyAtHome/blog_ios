@@ -71,6 +71,7 @@
 		D01770D31BA1556B003BA551 /* NetQueryDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetQueryDelegate.h; sourceTree = "<group>"; };
 		D01770D41BA177E6003BA551 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		D01770D51BA177E6003BA551 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D02179AD1BB2604500A855E1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BlogTableViewCell.strings"; sourceTree = "<group>"; };
 		D0404A1F1BAA9A190072DF55 /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
 		D0404A201BAA9A190072DF55 /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validator.m; sourceTree = "<group>"; };
 		D0404A221BAA9D3F0072DF55 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -121,7 +122,6 @@
 		D08A2F2F1BB107A200B6F49F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BlogListViewController.xib; sourceTree = "<group>"; };
 		D08A2F301BB107B500B6F49F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BlogListViewController.strings"; sourceTree = "<group>"; };
 		D08A2F321BB107F800B6F49F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BlogTableViewCell.xib; sourceTree = "<group>"; };
-		D08A2F371BB107FE00B6F49F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/BlogTableViewCell.strings"; sourceTree = "<group>"; };
 		D08A2F381BB1083900B6F49F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BlogListViewController.strings; sourceTree = "<group>"; };
 		D08A2F3A1BB10A7300B6F49F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/BlogPostViewController.xib; sourceTree = "<group>"; };
 		D08A2F3D1BB10B4800B6F49F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BlogPostViewController.strings; sourceTree = "<group>"; };
@@ -650,8 +650,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				D08A2F321BB107F800B6F49F /* Base */,
-				D08A2F371BB107FE00B6F49F /* zh-Hans */,
 				D08A2F421BB11C6000B6F49F /* en */,
+				D02179AD1BB2604500A855E1 /* zh-Hans */,
 			);
 			name = BlogTableViewCell.xib;
 			sourceTree = "<group>";

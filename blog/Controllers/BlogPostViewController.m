@@ -54,6 +54,8 @@
     [[self markdownContainerView] addSubview:_markdownEditorView];
 }
 - (IBAction)preview:(id)sender {
+    _title = _textFieldTitle.text;
+    _markdownText = _markdownEditorView.text;
     BlogPreviewViewController* postVC = [[BlogPreviewViewController alloc]initWithNibName:@"BlogPreviewViewController" bundle:(NSBundle *)nil];
     [postVC setPreview:_title content:_markdownText];
     [self.navigationController pushViewController:postVC animated:YES];

@@ -81,7 +81,7 @@
 
 -(Boolean)isNextPage:(Page*)newPage{
     if(newPage != nil && blogPage != nil){
-        return newPage.page = blogPage.page +1;
+        return newPage.page == blogPage.page +1;
     }
     return false;
 }

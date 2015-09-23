@@ -21,10 +21,10 @@
     self.version = [dic objectForKey:@"version"];
     self.viewCount = [dic objectForKey:@"viewCount"];
     
-    self.createBy = [dic objectForKey:@"createBy"];
-    self.createDate = [dic objectForKey:@"createDate"];
-    self.updateBy = [dic objectForKey:@"updateBy"];
-    self.updateDate = [dic objectForKey:@"updateDate"];
+    self.createBy = [dic objectForKey:@"createdBy"];
+    self.createDate = [dic objectForKey:@"createdDate"];
+    self.updateBy = [dic objectForKey:@"updatedBy"];
+    self.updateDate = [dic objectForKey:@"updatedDate"];
     return self;
 }
 
