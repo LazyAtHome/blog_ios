@@ -47,11 +47,11 @@
 }
 
 
--(void)blogsGetAll:(id)delegate{
+-(void)blogsGetAll:(NSString*)page delegate:(id)delegate{
     NetQuery* netQuery = [[NetQuery alloc]init];
     netQuery.delegate = delegate;
     NSMutableDictionary* dic = [[NSMutableDictionary alloc]init];
-    [dic setObject:@"1" forKey:@"page"];
+    [dic setObject:page forKey:@"page"];
     [dic setObject:@"10" forKey:@"limit"];
     [netQuery httpGet:URL_BLOG_GETALL params:dic tag:TAG_NETQUERY_BLOG_GETALL];
 }

@@ -7,6 +7,11 @@
 //
 
 #import "NetQuery.h"
+@interface NetQuery()
+
+- (void)addCommonHeaders:(AFHTTPRequestOperationManager*)request;
+
+@end
 
 @implementation NetQuery
 
@@ -16,6 +21,10 @@
     self = [super init];
     self.delegate = delegate;
     return self;
+}
+
+- (void)addCommonHeaders:(AFHTTPRequestOperationManager*)request {
+    
 }
 
 - (void)httpGet:(NSString*)url params:(NSDictionary*)params tag:(int)tag{

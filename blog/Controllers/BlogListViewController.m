@@ -6,6 +6,8 @@
 //  Copyright (c) 2015年 lazyathome. All rights reserved.
 //
 
+#import <MJRefresh/MJRefresh.h>
+#import <MJRefresh/UIScrollView+MJRefresh.h>
 #import "BlogListViewController.h"
 #import "BlogPostViewController.h"
 #import "BlogPreviewViewController.h"
@@ -16,8 +18,7 @@
 #import "Page+Blog.h"
 #import "Response.h"
 #import "Blog.h"
-#import <MJRefresh/MJRefresh.h>
-#import <MJRefresh/UIScrollView+MJRefresh.h>
+#import "Const.h"
 
 @interface BlogListViewController ()<UITableViewDelegate,NetQueryDelegate>{
 
@@ -29,13 +30,13 @@
 
 @implementation BlogListViewController
 
--(void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];// Do any additional setup after loading the view, typically from a nib.
-    [self setupRefresh:_tableView];
-    
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupRefresh:_tableView];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(postChanged:)
+                                                 name:KNotify_PostChanged
+                                               object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,12 +44,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)postChanged:(NSNotification *)notification {
+    
+    [self getBlogs];
+}
 - (void)onSucceed:(NSDictionary*)response tag:(int)tag {
     NSLog(@"JSON: %@", response);
     [self hideHud];
     Response* blogResponse = [[Response alloc]initWithDictionary:response];
     if([blogResponse isSucceed]){
-        blogPage = [[Page alloc]initWithDictionary:blogResponse.data];
+        Page* newPage = [[Page alloc]initWithDictionary:blogResponse.data];
+        if([self isNextPage:newPage]){
+            [self updateNextPage:newPage];
+        }else{
+            blogPage = newPage;
+        }
         [_tableView reloadData];
     }else{
         [self showAlert:blogResponse.responseMsg];
@@ -59,6 +69,21 @@
     // (最好在刷新表格后调用)调用endRefreshing可以结束刷新状态
     [_tableView.footer endRefreshing];
     
+}
+
+-(void)updateNextPage:(Page*)newPage{
+    blogPage.page = newPage.page;
+    blogPage.totalCount = newPage.totalCount;
+    blogPage.totalPages = newPage.totalPages;
+    
+    [blogPage.dataList addObjectsFromArray:newPage.dataList];
+}
+
+-(Boolean)isNextPage:(Page*)newPage{
+    if(newPage != nil && blogPage != nil){
+        return newPage.page = blogPage.page +1;
+    }
+    return false;
 }
 
 - (void)onFailed:(int)status errorMsg:(NSString*)errorMsg tag:(int)tag {
@@ -74,7 +99,11 @@
 
 -(void)getBlogs {
     [self showHud];
-    [[BlogService singleton]blogsGetAll:self];
+    [[BlogService singleton]blogsGetAll:@"1" delegate:self];
+}
+-(void)getBlogs : (int)page {
+    [self showHud];
+    [[BlogService singleton]blogsGetAll:[NSString stringWithFormat:@"%d",page] delegate:self];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -135,7 +164,11 @@
     // 刷新表格
     [_tableView reloadData];
     
-    [self getBlogs];
+    if(blogPage == nil || blogPage.page <=0){
+        [self getBlogs];
+    }else{
+        [self getBlogs:blogPage.page+1];
+    }
 }
 
 

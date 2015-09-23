@@ -17,7 +17,7 @@
 
 -(void)blogDelete:(NSString*)blogId delegate:(id)delegate;
 
--(void)blogsGetAll:(id)delegate;
+-(void)blogsGetAll:(NSString*)page delegate:(id)delegate;
 
 -(void)blogsGetById:(NSString*)blogId delegate:(id)delegate;
 

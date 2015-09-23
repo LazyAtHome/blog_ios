@@ -66,4 +66,6 @@
 
 #define TAG_NETQUERY_DELETE             15
 
+#define KNotify_PostChanged              @"PostChanged"
+
 #endif

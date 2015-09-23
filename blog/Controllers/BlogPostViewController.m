@@ -12,6 +12,7 @@
 #import "UIViewController+HUD.h"
 #import "Response.h"
 #import "BlogService.h"
+#import "Const.h"
 
 @interface BlogPostViewController (){
     UITextView              *_markdownEditorView;
@@ -80,6 +81,7 @@
     Response* blogResponse = [[Response alloc]initWithDictionary:response];
     if([blogResponse isSucceed]){
         [self showAlert:NSLocalizedString(@"Succeed", nil)];
+        [[NSNotificationCenter defaultCenter] postNotificationName:KNotify_PostChanged object:nil];
         [self back];
     }else{
         [self showAlert:blogResponse.responseMsg];

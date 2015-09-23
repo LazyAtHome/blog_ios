@@ -18,7 +18,6 @@
 @property (nonatomic,copy) NetQuerySucceed onSucceed;
 @property (nonatomic,copy) NetQueryFailed onFailed;
 
-- (void)addCommonHeaders:(AFHTTPRequestOperationManager*)request;
 
 - (void)httpGet:(NSString*)url params:(NSDictionary*)params tag:(int)tag;
 - (void)httpPost:(NSString*)url params:(NSDictionary*)params tag:(int)tag;
