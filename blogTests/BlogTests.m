@@ -82,7 +82,7 @@
 }
 
 -(void)testBlogsGetAll {
-    [[BlogService singleton] blogsGetAll:self];
+    [[BlogService singleton] blogsGetAll:@"1" delegate:self];
     [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
 }
 
