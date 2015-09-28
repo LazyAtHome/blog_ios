@@ -14,6 +14,7 @@
 #import "Const.h"
 #import "Response.h"
 #import "User.h"
+#import "LoginManager.h"
 
 @interface LoginViewController () {
     
@@ -40,12 +41,12 @@
         return;
     }
     [self showHud];
-    [[UserService sharedUserService] login:_textAccount.text password:_textPassword.text delegate:self];
+    [[UserService singleton] login:_textAccount.text password:_textPassword.text delegate:self];
 }
 
 - (IBAction)logout:(id)sender {
     [self showHud];
-    [[UserService sharedUserService] logout:self];
+    [[UserService singleton] logout:self];
 }
 
 - (void)onSucceed:(NSDictionary*)response tag:(int)tag {
@@ -58,11 +59,13 @@
            [self showAlert:NSLocalizedString(@"Login Succeed", nil)];
             User* user = [[User alloc]initWithDictionary:loginResponse.data];
             [labelUserName setText:user.userName];
+            [[LoginManager singleton] loginSucceed:user];
         }else{
             [self showAlert:loginResponse.responseMsg];
         }
     }
     else if(tag == TAG_NETQUERY_LOGOUT){
+        [[LoginManager singleton]logout];
         Response* loginResponse = [[Response alloc]initWithDictionary:response];
         if([loginResponse isSucceed]){
             viewLogin.hidden = NO;

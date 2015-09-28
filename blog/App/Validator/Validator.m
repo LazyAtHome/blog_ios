@@ -73,7 +73,7 @@ BOOL isNumber (char ch)
 + (BOOL) isValidZipcode:(NSString*)value
 {
     const char *cvalue = [value UTF8String];
-    int len = strlen(cvalue);
+    unsigned long len = strlen(cvalue);
     if (len != 6) {
         return FALSE;
     }
@@ -109,7 +109,7 @@ BOOL isNumber (char ch)
     BOOL valid = TRUE;
     const char *cvalue = [value UTF8String];
     int currentState = 0;
-    int len = strlen(cvalue);
+    unsigned long len = strlen(cvalue);
     int index;
     for (int i = 0; i < len && valid; i++) {
         index = getIndex(cvalue[i]);
@@ -132,7 +132,7 @@ BOOL isNumber (char ch)
 
 + (BOOL) isValidNumber:(NSString*)value{
     const char *cvalue = [value UTF8String];
-    int len = strlen(cvalue);
+    unsigned long len = strlen(cvalue);
     for (int i = 0; i < len; i++) {
         if(!isNumber(cvalue[i])){
             return FALSE;
@@ -143,7 +143,7 @@ BOOL isNumber (char ch)
 
 + (BOOL) isValidPhone:(NSString*)value {
     const char *cvalue = [value UTF8String];
-    int len = strlen(cvalue);
+    unsigned long len = strlen(cvalue);
     if (len != 11) {
         return FALSE;
     }

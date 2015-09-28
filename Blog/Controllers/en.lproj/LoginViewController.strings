@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "用户信息"; ObjectID = "2gb-Qp-REZ"; */
+"2gb-Qp-REZ.text" = "User";
+
+/* Class = "UIButton"; normalTitle = "退出登录"; ObjectID = "8pk-7J-b6B"; */
+"8pk-7J-b6B.normalTitle" = "Logout";
+
+/* Class = "UILabel"; text = "输入密码"; ObjectID = "VTC-lw-bOo"; */
+"VTC-lw-bOo.text" = "Password";
+
+/* Class = "UILabel"; text = "用户名"; ObjectID = "c20-ov-q2y"; */
+"c20-ov-q2y.text" = "UserName";
+
+/* Class = "UITextField"; placeholder = "Please input account"; ObjectID = "drQ-XX-vbO"; */
+"drQ-XX-vbO.placeholder" = "Please input account";
+
+/* Class = "UITextField"; text = "peterwang"; ObjectID = "drQ-XX-vbO"; */
+"drQ-XX-vbO.text" = "peterwang";
+
+/* Class = "UITextField"; placeholder = "Please input password"; ObjectID = "ixc-kN-fVq"; */
+"ixc-kN-fVq.placeholder" = "Please input password";
+
+/* Class = "UITextField"; text = "1234567"; ObjectID = "ixc-kN-fVq"; */
+"ixc-kN-fVq.text" = "1234567";
+
+/* Class = "UIButton"; normalTitle = "登录"; ObjectID = "waX-pe-upZ"; */
+"waX-pe-upZ.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "yn5-oO-jhX"; */
+"yn5-oO-jhX.text" = "Login";

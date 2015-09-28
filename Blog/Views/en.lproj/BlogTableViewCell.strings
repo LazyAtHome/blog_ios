@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; normalTitle = "修改"; ObjectID = "AB3-d0-LVs"; */
+"AB3-d0-LVs.normalTitle" = "Edit";
+
+/* Class = "UIButton"; normalTitle = "删除"; ObjectID = "FC4-Rf-kUS"; */
+"FC4-Rf-kUS.normalTitle" = "Delete";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "G2N-lM-45y"; */
+"G2N-lM-45y.text" = "0";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "GOf-GN-sB1"; */
+"GOf-GN-sB1.text" = "0";
+
+/* Class = "UILabel"; text = "发表时间:"; ObjectID = "IgS-WL-9cC"; */
+"IgS-WL-9cC.text" = "Date:";
+
+/* Class = "UILabel"; text = "编辑"; ObjectID = "L3L-XH-Pss"; */
+"L3L-XH-Pss.text" = "Edit";
+
+/* Class = "UILabel"; text = "阅读"; ObjectID = "aqM-BZ-Fo0"; */
+"aqM-BZ-Fo0.text" = "Read";
+
+/* Class = "UILabel"; text = "发表人:"; ObjectID = "t8d-nl-OZO"; */
+"t8d-nl-OZO.text" = "Author:";

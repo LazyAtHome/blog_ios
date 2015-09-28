@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface User : NSObject
+
 -(instancetype)initWithDictionary:(NSDictionary*)dic;
 
 @property NSString* userName;
+@property NSString* accessToken;
+@property NSNumber* id;
 
 @end

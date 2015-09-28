@@ -1,0 +1,13 @@
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "A5a-DV-8jA"; */
+"A5a-DV-8jA.normalTitle" = "返回";
+
+/* Class = "UILabel"; text = "Post"; ObjectID = "QE0-pE-EmF"; */
+"QE0-pE-EmF.text" = "博客";
+
+/* Class = "UIButton"; normalTitle = "Preview"; ObjectID = "ViC-UL-Wmd"; */
+"ViC-UL-Wmd.normalTitle" = "预览";
+
+"UnW-IS-e0b.normalTitle" = "发布";
+
+"eEu-Wi-zrS.text" = "正文";

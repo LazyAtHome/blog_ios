@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "NetQueryDelegate.h"
+#import <NSObject+Singleton.h>
 
 @interface UserService : NSObject
-
-+(UserService*) sharedUserService;
 
 -(void)register:(NSString*)userName password:(NSString*)password delegate:(id)delegate;
 -(void)login:(NSString*)userName password:(NSString*)password delegate:(id)delegate;

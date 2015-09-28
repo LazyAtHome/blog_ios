@@ -11,7 +11,9 @@
 
 @interface BlogListViewController : BaseViewController
 
-
 - (IBAction)gotoPost:(id)sender;
+- (void)headerRereshing;
+- (void)footerRereshing;
+
 @end
 
