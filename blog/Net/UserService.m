@@ -7,27 +7,10 @@
 //
 
 #import "UserService.h"
-#import "NetQuery.h"
+#import "NetQuery+LDJ.h"
 #import "Const.h"
 
-static UserService * _sharedUserService = nil;
-
 @implementation UserService
-
-+(UserService *)sharedUserService
-{
-    @synchronized([UserService class])
-    {
-        if(!_sharedUserService)
-        {
-            _sharedUserService = [[self alloc]init];
-        }
-        
-        return _sharedUserService;
-    }
-    
-    return nil;
-}
 
 -(void)register:(NSString*)userName password:(NSString*)password delegate:(id)delegate{
     NetQuery* netQuery = [[NetQuery alloc]init];

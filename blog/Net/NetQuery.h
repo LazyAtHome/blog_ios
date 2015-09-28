@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "NetQueryDelegate.h"
+#import <AFNetworking/AFNetworking.h>
 
 @interface NetQuery : NSObject
 
@@ -17,7 +18,10 @@
 @property (nonatomic,copy) NetQuerySucceed onSucceed;
 @property (nonatomic,copy) NetQueryFailed onFailed;
 
+
 - (void)httpGet:(NSString*)url params:(NSDictionary*)params tag:(int)tag;
 - (void)httpPost:(NSString*)url params:(NSDictionary*)params tag:(int)tag;
+- (void)httpPut:(NSString*)url params:(NSDictionary*)params tag:(int)tag;
+- (void)httpDelete:(NSString*)url params:(NSDictionary*)params tag:(int)tag;
 
 @end

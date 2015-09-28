@@ -20,6 +20,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UITabBarController* rootViewController = [[UITabBarController alloc]init];
     rootViewController.tabBar.tintColor = COLOR_MAIN;
@@ -34,9 +35,12 @@
     loginViewController.tabBarItem.image = [UIImage imageNamed:@"my_normal"];
     [rootViewController addChildViewController:loginViewController];
     
+    rootViewController.selectedIndex = 1;
+    
     UINavigationController* rootNavigation = [[UINavigationController alloc]initWithRootViewController:rootViewController];
     rootNavigation.navigationBarHidden = YES;
     self.window.rootViewController = rootNavigation;
+    [self.window makeKeyAndVisible];
 
     return YES;
 }
