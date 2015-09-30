@@ -7,10 +7,11 @@
 //
 
 #import "BlogPreviewViewController.h"
-#import "BPMarkdownView.h"
+//#import "BPMarkdownView.h"
 
 @interface BlogPreviewViewController (){
-    BPMarkdownView          *_markdownPreviewView;
+    //BPMarkdownView          *_markdownPreviewView;
+    UITextView                *_markdownPreviewView;
     NSString                *_markdownText;
     NSString                *_title;
     Blog                    *_blog;
@@ -36,12 +37,13 @@
 
 -(void)initPreviewMarkDownView{
     CGRect markdownRect = CGRectMake(0.f, 0.f, self.markdownContainerView.frame.size.width, self.markdownContainerView.frame.size.height);
-    _markdownPreviewView = [[BPMarkdownView alloc] initWithFrame:markdownRect];
+    _markdownPreviewView = [[UITextView alloc] initWithFrame:markdownRect];
     
     // Obtain some markdown
     
     // Supply the markdown view with markdown to render
-    [_markdownPreviewView setMarkdown:_markdownText];
+    //[_markdownPreviewView setMarkdown:_markdownText];
+    [_markdownPreviewView setText:_markdownText];
     // Add the markdown view to a superview
     [[self markdownContainerView] addSubview:_markdownPreviewView];
 }

@@ -1,1 +1,0 @@
-BYPASS_OTHER_LDFLAGS = -l"stdc++" -framework "CoreGraphics" -framework "CoreText" -framework "Foundation" -framework "QuartzCore" -framework "UIKit"

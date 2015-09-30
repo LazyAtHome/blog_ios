@@ -1,6 +1,0 @@
-framework module Bypass {
-  umbrella header "Bypass-umbrella.h"
-
-  export *
-  module * { export * }
-}

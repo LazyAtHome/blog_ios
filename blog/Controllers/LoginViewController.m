@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 lazyathome. All rights reserved.
 //
 
+#import <UIViewController+HUD/UIViewController+HUD.h>
 #import "LoginViewController.h"
-#import "UIViewController+HUD.h"
 #import "WCAlertView.h"
 #import "UserService.h"
 #import "LDJValidator.h"

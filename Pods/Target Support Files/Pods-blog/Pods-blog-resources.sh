@@ -57,6 +57,36 @@ install_resource()
       ;;
   esac
 }
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "BButton/BButton/resources/FontAwesome.ttf"
+  install_resource "EasyIOS/Extend/SVPullToRefresh/arrow-down@2x.png"
+  install_resource "FontIcon/FontAwesome/fontAwesome.json"
+  install_resource "FontIcon/FontAwesome/fontAwesome.otf"
+  install_resource "FontIcon/fontIconConfig.json"
+  install_resource "FontIcon/FoundationIcons/foundationIcons.json"
+  install_resource "FontIcon/FoundationIcons/foundationIcons.ttf"
+  install_resource "FontIcon/IonIcons/ionIcons.json"
+  install_resource "FontIcon/IonIcons/ionIcons.ttf"
+  install_resource "FontIcon/Zocial/zocialRegularWebfont.json"
+  install_resource "FontIcon/Zocial/zocialRegularWebfont.ttf"
+  install_resource "IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle"
+  install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "BButton/BButton/resources/FontAwesome.ttf"
+  install_resource "EasyIOS/Extend/SVPullToRefresh/arrow-down@2x.png"
+  install_resource "FontIcon/FontAwesome/fontAwesome.json"
+  install_resource "FontIcon/FontAwesome/fontAwesome.otf"
+  install_resource "FontIcon/fontIconConfig.json"
+  install_resource "FontIcon/FoundationIcons/foundationIcons.json"
+  install_resource "FontIcon/FoundationIcons/foundationIcons.ttf"
+  install_resource "FontIcon/IonIcons/ionIcons.json"
+  install_resource "FontIcon/IonIcons/ionIcons.ttf"
+  install_resource "FontIcon/Zocial/zocialRegularWebfont.json"
+  install_resource "FontIcon/Zocial/zocialRegularWebfont.ttf"
+  install_resource "IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle"
+  install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+fi
 
 mkdir -p "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

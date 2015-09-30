@@ -1,13 +1,18 @@
 # Uncomment this line to define a global platform for your project
 # platform :ios, '8.4'
-use_frameworks!
+#use_frameworks!
+platform :ios, '7.0'
 
 target 'Blog' do
+    
+pod 'EasyIOS', :git=>'https://github.com/zhuchaowe/EasyIOS.git'
+pod 'EasyIOS-Extention', '~> 1.2'
+
 #Network framework
 pod 'AFNetworking', '~> 2.5'
 
 #Markdown
-pod 'Bypass', '~> 1.0.1'
+#pod 'Bypass', '~> 1.0.1'
 pod 'RFMarkdownTextView', '~> 1.4'
 
 #UIControl
@@ -30,6 +35,7 @@ pod 'MJRefresh', '~> 2.4.10'
 
 #Log
 pod 'CocoaLumberjack', '~> 2.0.1'
+
 end
 
 target 'BlogTests' do

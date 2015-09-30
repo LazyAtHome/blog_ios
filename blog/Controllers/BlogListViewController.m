@@ -8,10 +8,10 @@
 
 #import <MJRefresh/MJRefresh.h>
 #import <MJRefresh/UIScrollView+MJRefresh.h>
+#import <UIViewController+HUD/UIViewController+HUD.h>
 #import "BlogListViewController.h"
 #import "BlogPostViewController.h"
 #import "BlogPreviewViewController.h"
-#import "UIViewController+HUD.h"
 #import "BlogTableViewCell.h"
 #import "NetQuery.h"
 #import "BlogService.h"
