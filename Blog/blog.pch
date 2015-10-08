@@ -1,0 +1,14 @@
+//
+//  blog.pch
+//  Blog
+//
+//  Created by peter on 15/10/8.
+//  Copyright © 2015年 lazyathome. All rights reserved.
+//
+
+#ifndef blog_h
+#define blog_h
+
+#import "blog-Swift.h"
+
+#endif /* blog_h */

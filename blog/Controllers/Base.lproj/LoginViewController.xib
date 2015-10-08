@@ -143,9 +143,24 @@
                                 <action selector="login:" destination="-1" eventType="touchUpInside" id="DPH-ea-Mb3"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDn-k0-w8z" userLabel="Register">
+                            <rect key="frame" x="50" y="295" width="275" height="44"/>
+                            <color key="backgroundColor" red="0.0" green="0.71372549019999998" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="XB9-Jc-ZTR"/>
+                            </constraints>
+                            <state key="normal" title="Register">
+                                <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="register:" destination="-1" eventType="touchUpInside" id="lvF-zT-gzi"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="gDn-k0-w8z" firstAttribute="top" secondItem="waX-pe-upZ" secondAttribute="bottom" constant="8" id="06c-Ln-z4w"/>
                         <constraint firstAttribute="centerX" secondItem="waX-pe-upZ" secondAttribute="centerX" id="2Mu-lK-yNk"/>
                         <constraint firstItem="c20-ov-q2y" firstAttribute="leading" secondItem="jha-4P-7dP" secondAttribute="leading" constant="20" id="2lb-kZ-aaT"/>
                         <constraint firstItem="ixc-kN-fVq" firstAttribute="top" secondItem="VTC-lw-bOo" secondAttribute="bottom" constant="2" id="4sG-DS-POE"/>
@@ -155,11 +170,13 @@
                         <constraint firstItem="drQ-XX-vbO" firstAttribute="top" secondItem="c20-ov-q2y" secondAttribute="bottom" constant="2" id="hjY-dE-fQZ"/>
                         <constraint firstItem="drQ-XX-vbO" firstAttribute="leading" secondItem="jha-4P-7dP" secondAttribute="leading" constant="20" id="i71-ov-jF9"/>
                         <constraint firstItem="ixc-kN-fVq" firstAttribute="leading" secondItem="jha-4P-7dP" secondAttribute="leading" constant="20" id="iSF-Xm-BWX"/>
+                        <constraint firstAttribute="trailing" secondItem="gDn-k0-w8z" secondAttribute="trailing" constant="50" id="lTw-ye-QoM"/>
                         <constraint firstItem="waX-pe-upZ" firstAttribute="leading" secondItem="jha-4P-7dP" secondAttribute="leading" constant="50" id="m80-M9-qOj"/>
                         <constraint firstAttribute="trailing" secondItem="waX-pe-upZ" secondAttribute="trailing" constant="50" id="pAZ-gr-Pzq"/>
                         <constraint firstAttribute="trailing" secondItem="ixc-kN-fVq" secondAttribute="trailing" constant="20" id="qSL-cl-kP6"/>
                         <constraint firstItem="VTC-lw-bOo" firstAttribute="top" secondItem="drQ-XX-vbO" secondAttribute="bottom" constant="10" id="sFO-vb-DH9"/>
                         <constraint firstItem="c20-ov-q2y" firstAttribute="top" secondItem="jha-4P-7dP" secondAttribute="top" constant="92" id="tdA-q1-yzi"/>
+                        <constraint firstItem="gDn-k0-w8z" firstAttribute="leading" secondItem="jha-4P-7dP" secondAttribute="leading" constant="50" id="u2V-XA-4EW"/>
                     </constraints>
                 </view>
             </subviews>

@@ -82,4 +82,9 @@
     NSLog(@"Error: %d, %@", status, errorMsg);
 }
 
+
+- (IBAction)register:(id)sender{
+    RegisterViewController* registerVC = [[RegisterViewController alloc]init];
+    [self.navigationController pushViewController:registerVC animated:YES];
+}
 @end

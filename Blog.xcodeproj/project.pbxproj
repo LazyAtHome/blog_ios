@@ -70,6 +70,10 @@
 		D0A57A8E1BA9661300412A13 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A57A8D1BA9661300412A13 /* UserService.m */; };
 		D0B3DCE71BA2AF0F0056F0D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCE91BA2AF0F0056F0D9 /* Localizable.strings */; };
 		D0B3DCF11BA2B3030056F0D9 /* BlogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B3DCEF1BA2B3030056F0D9 /* BlogTableViewCell.m */; };
+		D0D1D4A71BC61000006F5CC1 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1D4A61BC61000006F5CC1 /* RegisterViewModel.swift */; settings = {ASSET_TAGS = (); }; };
+		D0D1D4AA1BC61B17006F5CC1 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1D4A91BC61B17006F5CC1 /* RegisterRequest.swift */; settings = {ASSET_TAGS = (); }; };
+		D0D1D4AC1BC63FFE006F5CC1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1D4AB1BC63FFE006F5CC1 /* RegisterViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		D0D1D4B01BC640E5006F5CC1 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D1D4AF1BC640E5006F5CC1 /* RegisterViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		E776E6807C19D2F63F7DA753 /* libPods-Blog.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC06E05A3C44D6ED1112F076 /* libPods-Blog.a */; };
 		F2800033A332CC2963CE8782 /* libPods-BlogTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20070C4361527797EF99E33B /* libPods-BlogTests.a */; };
 		a5162048b336bd94f134588a /* LDJValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D0404A291BAAA4AA0072DF55 /* LDJValidator.m */; };
@@ -142,8 +146,8 @@
 		D067C9511BA006D200048D8B /* blog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = blog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D067C9551BA006D200048D8B /* Info-cal.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-cal.plist"; sourceTree = "<group>"; };
 		D067C9561BA006D200048D8B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D067C9581BA006D200048D8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D067C9591BA006D200048D8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D067C9581BA006D200048D8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Blog/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		D067C9591BA006D200048D8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Blog/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		D067C9641BA006D200048D8B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D067C9671BA006D200048D8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D067C96D1BA006D200048D8B /* BlogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +189,12 @@
 		D0B3DCED1BA2B08B0056F0D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D0B3DCEE1BA2B3030056F0D9 /* BlogTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogTableViewCell.h; sourceTree = "<group>"; };
 		D0B3DCEF1BA2B3030056F0D9 /* BlogTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogTableViewCell.m; sourceTree = "<group>"; };
+		D0D1D4A51BC60FFF006F5CC1 /* Blog-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Blog-Bridging-Header.h"; path = "../ViewModels/Blog-Bridging-Header.h"; sourceTree = "<group>"; };
+		D0D1D4A61BC61000006F5CC1 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		D0D1D4A91BC61B17006F5CC1 /* RegisterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
+		D0D1D4AB1BC63FFE006F5CC1 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D0D1D4AF1BC640E5006F5CC1 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		D0D1D4B11BC650F0006F5CC1 /* blog.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blog.pch; sourceTree = "<group>"; };
 		E1569F18A64982921B8D332F /* Pods-BlogTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlogTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BlogTests/Pods-BlogTests.release.xcconfig"; sourceTree = "<group>"; };
 		af3de6410539663e2f92abc8 /* CFNetwork.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		b2109c4fb43c7919506df974 /* calabash.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; path = calabash.framework; sourceTree = "<group>"; };
@@ -280,6 +290,9 @@
 				D0404A1E1BAA9A080072DF55 /* Validator */,
 				D063BAB21BA6A1F800B4FF14 /* Const.h */,
 				D02179F51BBA7C7000A855E1 /* Aspect-AppDelegate.m */,
+				D067C9581BA006D200048D8B /* AppDelegate.h */,
+				D067C9591BA006D200048D8B /* AppDelegate.m */,
+				D0D1D4A51BC60FFF006F5CC1 /* Blog-Bridging-Header.h */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -321,14 +334,14 @@
 		D067C9531BA006D200048D8B /* Blog */ = {
 			isa = PBXGroup;
 			children = (
+				D0D1D4A81BC61B04006F5CC1 /* Request */,
+				D0D1D4A41BC60EEB006F5CC1 /* ViewModels */,
 				D063BAB11BA6A1EB00B4FF14 /* App */,
 				D067C97E1BA0074300048D8B /* Models */,
 				D067C9801BA0074300048D8B /* Views */,
 				D067C97D1BA0074300048D8B /* Controllers */,
 				D01770CC1BA122F6003BA551 /* Net */,
 				D067C97F1BA0074300048D8B /* ThirdParty */,
-				D067C9581BA006D200048D8B /* AppDelegate.h */,
-				D067C9591BA006D200048D8B /* AppDelegate.m */,
 				D067C9641BA006D200048D8B /* Images.xcassets */,
 				D067C9661BA006D200048D8B /* LaunchScreen.xib */,
 				D067C9541BA006D200048D8B /* Supporting Files */,
@@ -344,6 +357,7 @@
 				D063BAB31BA6A2F200B4FF14 /* Resources */,
 				D0B3DCE91BA2AF0F0056F0D9 /* Localizable.strings */,
 				D067C9561BA006D200048D8B /* main.m */,
+				D0D1D4B11BC650F0006F5CC1 /* blog.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -391,6 +405,8 @@
 				D08A2F441BB134EE00B6F49F /* BlogPreviewViewController.h */,
 				D08A2F451BB134EE00B6F49F /* BlogPreviewViewController.m */,
 				D08A2F4B1BB1367700B6F49F /* BlogPreviewViewController.xib */,
+				D0D1D4AB1BC63FFE006F5CC1 /* RegisterViewController.swift */,
+				D0D1D4AF1BC640E5006F5CC1 /* RegisterViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -427,6 +443,22 @@
 				D08A2F331BB107F800B6F49F /* BlogTableViewCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D0D1D4A41BC60EEB006F5CC1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D0D1D4A61BC61000006F5CC1 /* RegisterViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D0D1D4A81BC61B04006F5CC1 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				D0D1D4A91BC61B17006F5CC1 /* RegisterRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -497,6 +529,7 @@
 		D067C9491BA006D200048D8B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = lazyathome;
 				TargetAttributes = {
@@ -565,6 +598,7 @@
 				D08A2F271BB104EB00B6F49F /* BlogListViewController.xib in Resources */,
 				D067C9681BA006D200048D8B /* LaunchScreen.xib in Resources */,
 				D08A2F311BB107F800B6F49F /* BlogTableViewCell.xib in Resources */,
+				D0D1D4B01BC640E5006F5CC1 /* RegisterViewController.xib in Resources */,
 				D063BAB91BA6A2F200B4FF14 /* home_normal.png in Resources */,
 				D067C9651BA006D200048D8B /* Images.xcassets in Resources */,
 				D0B3DCE71BA2AF0F0056F0D9 /* Localizable.strings in Resources */,
@@ -697,6 +731,7 @@
 				D02179F61BBA7C7000A855E1 /* Aspect-AppDelegate.m in Sources */,
 				D0404A271BAA9D6A0072DF55 /* Response.m in Sources */,
 				D067C9861BA007A100048D8B /* BlogPostViewController.m in Sources */,
+				D0D1D4AC1BC63FFE006F5CC1 /* RegisterViewController.swift in Sources */,
 				D063BABE1BA7ACDB00B4FF14 /* BaseViewController.m in Sources */,
 				D0404A211BAA9A190072DF55 /* Validator.m in Sources */,
 				D067C95A1BA006D200048D8B /* AppDelegate.m in Sources */,
@@ -705,10 +740,12 @@
 				D0404A2A1BAAA4AA0072DF55 /* LDJValidator.m in Sources */,
 				D067C9851BA007A100048D8B /* BlogListViewController.m in Sources */,
 				D0404A241BAA9D3F0072DF55 /* User.m in Sources */,
+				D0D1D4AA1BC61B17006F5CC1 /* RegisterRequest.swift in Sources */,
 				D01770D11BA12EFD003BA551 /* NetQuery.m in Sources */,
 				D012CBF11BAFAD7D0035BEEA /* LoginManager.m in Sources */,
 				D012CBEE1BAFAC780035BEEA /* NetQuery+LDJ.m in Sources */,
 				D0B3DCF11BA2B3030056F0D9 /* BlogTableViewCell.m in Sources */,
+				D0D1D4A71BC61000006F5CC1 /* RegisterViewModel.swift in Sources */,
 				D0404A331BABD4070072DF55 /* BlogService.m in Sources */,
 				D08A2F461BB134EE00B6F49F /* BlogPreviewViewController.m in Sources */,
 				D0A57A8E1BA9661300412A13 /* UserService.m in Sources */,
@@ -963,8 +1000,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9FF2630E9DBD2771FF940852 /* Pods-Blog.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Blog/blog.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -977,6 +1018,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lazyathome.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = blog;
+				SWIFT_OBJC_BRIDGING_HEADER = "Blog/ViewModels/Blog-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -984,8 +1027,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B8CDCE78F3D9E20A970A89D4 /* Pods-Blog.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Blog/blog.pch;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -998,6 +1045,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "lazyathome.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = blog;
+				SWIFT_OBJC_BRIDGING_HEADER = "Blog/ViewModels/Blog-Bridging-Header.h";
 			};
 			name = Release;
 		};
