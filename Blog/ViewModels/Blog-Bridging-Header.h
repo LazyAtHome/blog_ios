@@ -6,3 +6,6 @@
 #import "EasyIOS/SceneModel.h"
 #import "EasyIOS/Request.h"
 #import "LoginManager.h"
+#import "BaseViewController.h"
+#import <ReactiveCocoa/RACEXTScope.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>

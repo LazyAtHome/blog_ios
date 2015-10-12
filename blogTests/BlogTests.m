@@ -18,6 +18,9 @@
 #import "Page+Blog.h"
 #import "NetQuery+LDJ.h"
 #import "LoginManager.h"
+#import <EasyIOS/Action.h>
+#import <ReactiveCocoa/RACEXTScope.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface blogTests : XCTestCase<NetQueryDelegate>{
 }
@@ -96,6 +99,52 @@
     [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
     [[UserService singleton] current:self];
     [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+}
+
+- (void)testBlogPostFile {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docDir = [paths objectAtIndex:0];
+    NSString *path = [docDir  stringByAppendingPathComponent:@"Array.plist"];
+    NSString *content = @"abcd";
+    [content writeToFile:path atomically:YES encoding:NSUTF8StringEncoding error:nil];
+    
+    path = [[NSBundle mainBundle] pathForResource:@"1" ofType:@"zip"];
+    NSURL* fileURL = [NSURL fileURLWithPath:path];
+    NSError* error = [[NSError alloc]init];
+    Boolean reachable = [fileURL checkResourceIsReachableAndReturnError:&error];
+    
+    [[UserService singleton] login:@"peterwang" password:@"1234567" delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+    Action* action = [Action Action];
+    Request* request = [[Request alloc]init];
+    request.SCHEME = @"http";
+    request.HOST = @"jason.tunnel.mobi";
+    request.PATH = @"/blogserver/posts/uploadFile/158";//158,10
+    request.METHOD = @"POST";
+    NSMutableDictionary* dic = [[NSMutableDictionary alloc ]init];
+    if([[LoginManager singleton ] isLogined]){
+        
+        [dic setObject:[[LoginManager singleton] getAcessToken] forKey:@"accessToken"];
+    }
+    [dic setObject:@"multipart/form-data" forKey:@"Content-Type"];
+    request.httpHeaderFields = dic;
+    
+    NSMutableDictionary* files = [[NSMutableDictionary alloc ]init];
+    [files setObject:path forKey:@"file"];
+    request.requestFiles = files;
+    
+    [[RACObserve(request, state) //监控 网络请求的状态
+      filter:^BOOL(NSNumber *state) { //过滤请求状态
+          return request.succeed;
+      }]
+     subscribeNext:^(NSNumber *state) {
+         NSError *error;
+         [request.output objectForKey:@"Data"];
+         [self XCA_notify:XCTAsyncTestCaseStatusSucceeded];
+     }];
+    
+    [action Send:request];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0*600];
 }
 
 - (void)onSucceed:(NSDictionary*)response tag:(int)tag {

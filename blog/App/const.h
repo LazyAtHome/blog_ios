@@ -8,6 +8,7 @@
 
 #ifndef Blog_const_h
 #define Blog_const_h
+
 #define COLOR_MAIN [UIColor colorWithRed:0/255.0 green:0xb6/255.0 blue:0xd1/255.0 alpha:1.0];
 
 #define HTTP_JASON                     "jason.tunnel.mobi";
@@ -15,20 +16,20 @@
 #undef MOCKUP
 
 #ifndef MOCKUP
+//"http://192.168.1.101:8888/blogserver"#x
+#define HTTP_PREFIX(x)                 "http://192.168.1.127:8080/blogserver"#x
+#define HTTP_BLOG_PREFIX(x)            "http://192.168.1.127:8080/blogserver"#x
 
-#define HTTP_PREFIX(x)                 "http://192.168.1.101:8888/blogserver"#x
-#define HTTP_BLOG_PREFIX(x)            "http://192.168.1.101:8888/blogserver"#x
+#define URL_REGISTER                    Config.URL_REGISTER
+#define URL_LOGIN                       Config.URL_LOGIN
+#define URL_LOGOUT                      Config.URL_LOGOUT
+#define URL_CURRENT                     Config.URL_CURRENT
 
-#define URL_REGISTER                    @HTTP_PREFIX(/users/reg)
-#define URL_LOGIN                       @HTTP_PREFIX(/users/login)
-#define URL_LOGOUT                      @HTTP_PREFIX(/users/logout)
-#define URL_CURRENT                     @HTTP_PREFIX(/users/current)
-
-#define URL_BLOG_GETBYID                @HTTP_BLOG_PREFIX(/posts)
-#define URL_BLOG_GETALL                 @HTTP_BLOG_PREFIX(/posts/all)
-#define URL_BLOG_POST                   @HTTP_BLOG_PREFIX(/posts)
-#define URL_BLOG_UPDATE                 @HTTP_BLOG_PREFIX(/posts)
-#define URL_BLOG_DELETE                 @HTTP_BLOG_PREFIX(/posts)
+#define URL_BLOG_GETBYID                Config.URL_BLOG_GETBYID
+#define URL_BLOG_GETALL                 Config.URL_BLOG_GETALL
+#define URL_BLOG_POST                   Config.URL_BLOG_POST
+#define URL_BLOG_UPDATE                 Config.URL_BLOG_UPDATE
+#define URL_BLOG_DELETE                 Config.URL_BLOG_DELETE
 
 #else
 

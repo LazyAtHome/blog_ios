@@ -70,6 +70,8 @@
 		D0A57A8E1BA9661300412A13 /* UserService.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A57A8D1BA9661300412A13 /* UserService.m */; };
 		D0B3DCE71BA2AF0F0056F0D9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0B3DCE91BA2AF0F0056F0D9 /* Localizable.strings */; };
 		D0B3DCF11BA2B3030056F0D9 /* BlogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B3DCEF1BA2B3030056F0D9 /* BlogTableViewCell.m */; };
+		D0C5E5F01BCB5AA700D338DF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5E5EF1BCB5AA700D338DF /* Config.swift */; settings = {ASSET_TAGS = (); }; };
+		D0C5E62E1BCB989000D338DF /* 1.zip in Resources */ = {isa = PBXBuildFile; fileRef = D0C5E62D1BCB989000D338DF /* 1.zip */; settings = {ASSET_TAGS = (); }; };
 		D0D1D4A71BC61000006F5CC1 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1D4A61BC61000006F5CC1 /* RegisterViewModel.swift */; settings = {ASSET_TAGS = (); }; };
 		D0D1D4AA1BC61B17006F5CC1 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1D4A91BC61B17006F5CC1 /* RegisterRequest.swift */; settings = {ASSET_TAGS = (); }; };
 		D0D1D4AC1BC63FFE006F5CC1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1D4AB1BC63FFE006F5CC1 /* RegisterViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -189,6 +191,8 @@
 		D0B3DCED1BA2B08B0056F0D9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D0B3DCEE1BA2B3030056F0D9 /* BlogTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogTableViewCell.h; sourceTree = "<group>"; };
 		D0B3DCEF1BA2B3030056F0D9 /* BlogTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogTableViewCell.m; sourceTree = "<group>"; };
+		D0C5E5EF1BCB5AA700D338DF /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		D0C5E62D1BCB989000D338DF /* 1.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = 1.zip; sourceTree = "<group>"; };
 		D0D1D4A51BC60FFF006F5CC1 /* Blog-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Blog-Bridging-Header.h"; path = "../ViewModels/Blog-Bridging-Header.h"; sourceTree = "<group>"; };
 		D0D1D4A61BC61000006F5CC1 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		D0D1D4A91BC61B17006F5CC1 /* RegisterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
@@ -293,6 +297,7 @@
 				D067C9581BA006D200048D8B /* AppDelegate.h */,
 				D067C9591BA006D200048D8B /* AppDelegate.m */,
 				D0D1D4A51BC60FFF006F5CC1 /* Blog-Bridging-Header.h */,
+				D0C5E5EF1BCB5AA700D338DF /* Config.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 		D063BAB31BA6A2F200B4FF14 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0C5E62D1BCB989000D338DF /* 1.zip */,
 				D063BAB41BA6A2F200B4FF14 /* home_highlight.png */,
 				D063BAB51BA6A2F200B4FF14 /* home_normal.png */,
 				D063BAB61BA6A2F200B4FF14 /* my_highlight.png */,
@@ -596,6 +602,7 @@
 				D063BAB81BA6A2F200B4FF14 /* home_highlight.png in Resources */,
 				D063BABA1BA6A2F200B4FF14 /* my_highlight.png in Resources */,
 				D08A2F271BB104EB00B6F49F /* BlogListViewController.xib in Resources */,
+				D0C5E62E1BCB989000D338DF /* 1.zip in Resources */,
 				D067C9681BA006D200048D8B /* LaunchScreen.xib in Resources */,
 				D08A2F311BB107F800B6F49F /* BlogTableViewCell.xib in Resources */,
 				D0D1D4B01BC640E5006F5CC1 /* RegisterViewController.xib in Resources */,
@@ -740,6 +747,7 @@
 				D0404A2A1BAAA4AA0072DF55 /* LDJValidator.m in Sources */,
 				D067C9851BA007A100048D8B /* BlogListViewController.m in Sources */,
 				D0404A241BAA9D3F0072DF55 /* User.m in Sources */,
+				D0C5E5F01BCB5AA700D338DF /* Config.swift in Sources */,
 				D0D1D4AA1BC61B17006F5CC1 /* RegisterRequest.swift in Sources */,
 				D01770D11BA12EFD003BA551 /* NetQuery.m in Sources */,
 				D012CBF11BAFAD7D0035BEEA /* LoginManager.m in Sources */,
@@ -1054,11 +1062,14 @@
 			baseConfigurationReference = C217F5EADEABD946698FDA95 /* Pods-BlogTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1069,6 +1080,7 @@
 					"\"${PODS_ROOT}/Bypass/Libraries/bypass-core/src\"",
 					Pods/XCAsyncTestCase/AsyncXCTestingKit/AsyncXCTestingKit,
 					"\"${PODS_ROOT}/NSObject+Singleton\"",
+					"\"$(TARGET_TEMP_DIR)/../$(PROJECT_NAME).build/DerivedSources\"",
 				);
 				INFOPLIST_FILE = BlogTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1083,17 +1095,21 @@
 			baseConfigurationReference = E1569F18A64982921B8D332F /* Pods-BlogTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEFINES_MODULE = YES;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"\"${PODS_ROOT}/Bypass/Libraries/bypass-core/src\"",
 					Pods/XCAsyncTestCase/AsyncXCTestingKit/AsyncXCTestingKit,
 					"\"${PODS_ROOT}/NSObject+Singleton\"",
+					"\"$(TARGET_TEMP_DIR)/../$(PROJECT_NAME).build/DerivedSources\"",
 				);
 				INFOPLIST_FILE = BlogTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
