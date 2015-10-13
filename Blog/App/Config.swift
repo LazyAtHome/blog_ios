@@ -16,7 +16,8 @@ func +(left: NSString, right: NSString) -> NSString {
 }
 
 @objc class Config : NSObject {
-    static let HTTP_PREFIX : NSString = "http://jason.tunnel.mobi/blogserver"
+    static let HTTP_HOST : NSString = "jason.tunnel.mobi";
+    static let HTTP_PREFIX : NSString = "http://" + HTTP_HOST + "/blogserver"
     static let HTTP_BLOG_PREFIX : NSString  = HTTP_PREFIX
     static let  URL_REGISTER : NSString     = HTTP_PREFIX + "/users/reg"
     static let  URL_LOGIN : NSString        = HTTP_PREFIX + "/users/login"
@@ -28,4 +29,8 @@ func +(left: NSString, right: NSString) -> NSString {
     static let  URL_BLOG_POST: NSString     = HTTP_PREFIX + "/posts"
     static let  URL_BLOG_UPDATE: NSString   = HTTP_PREFIX + "/posts"
     static let  URL_BLOG_DELETE: NSString   = HTTP_PREFIX + "/posts"
+    
+    static let  URL_BLOG_COMMENT: NSString   = HTTP_PREFIX + "/postComments"
+    
+    static let TAG_NETQUERY_COMMENT         = 21
 }

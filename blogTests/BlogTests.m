@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "blog-Swift.h"
 #import <XCTest/XCTest.h>
 #import "XCTestCase+AsyncTesting.h"
 #import "NetQuery.h"
@@ -145,6 +146,31 @@
     
     [action Send:request];
     [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0*600];
+}
+
+
+- (void)testBlogComment {
+    [[UserService singleton] login:@"peterwang" password:@"1234567" delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+    
+    [[[CommentService alloc]init] comment:@"Comment From peterwang" postId:158 delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+}
+
+- (void)testBlogCommentUpdate {
+    [[UserService singleton] login:@"peterwang" password:@"1234567" delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+    
+    [[[CommentService alloc]init] commentUpdate:@"Update Comment From peterwang" postId:158 commentId:1 delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+}
+
+- (void)testBlogCommentDelete {
+    [[UserService singleton] login:@"peterwang" password:@"1234567" delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
+    
+    [[[CommentService alloc]init] commentDelete:2 delegate:self];
+    [self XCA_waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10.0];
 }
 
 - (void)onSucceed:(NSDictionary*)response tag:(int)tag {

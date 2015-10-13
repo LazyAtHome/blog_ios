@@ -72,6 +72,7 @@
 		D0B3DCF11BA2B3030056F0D9 /* BlogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B3DCEF1BA2B3030056F0D9 /* BlogTableViewCell.m */; };
 		D0C5E5F01BCB5AA700D338DF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5E5EF1BCB5AA700D338DF /* Config.swift */; settings = {ASSET_TAGS = (); }; };
 		D0C5E62E1BCB989000D338DF /* 1.zip in Resources */ = {isa = PBXBuildFile; fileRef = D0C5E62D1BCB989000D338DF /* 1.zip */; settings = {ASSET_TAGS = (); }; };
+		D0C5E6301BCBA92100D338DF /* CommentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C5E62F1BCBA92100D338DF /* CommentService.swift */; settings = {ASSET_TAGS = (); }; };
 		D0D1D4A71BC61000006F5CC1 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1D4A61BC61000006F5CC1 /* RegisterViewModel.swift */; settings = {ASSET_TAGS = (); }; };
 		D0D1D4AA1BC61B17006F5CC1 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1D4A91BC61B17006F5CC1 /* RegisterRequest.swift */; settings = {ASSET_TAGS = (); }; };
 		D0D1D4AC1BC63FFE006F5CC1 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D1D4AB1BC63FFE006F5CC1 /* RegisterViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -193,6 +194,7 @@
 		D0B3DCEF1BA2B3030056F0D9 /* BlogTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogTableViewCell.m; sourceTree = "<group>"; };
 		D0C5E5EF1BCB5AA700D338DF /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		D0C5E62D1BCB989000D338DF /* 1.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = 1.zip; sourceTree = "<group>"; };
+		D0C5E62F1BCBA92100D338DF /* CommentService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentService.swift; sourceTree = "<group>"; };
 		D0D1D4A51BC60FFF006F5CC1 /* Blog-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Blog-Bridging-Header.h"; path = "../ViewModels/Blog-Bridging-Header.h"; sourceTree = "<group>"; };
 		D0D1D4A61BC61000006F5CC1 /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		D0D1D4A91BC61B17006F5CC1 /* RegisterRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				D012CBED1BAFAC780035BEEA /* NetQuery+LDJ.m */,
 				D012CBEF1BAFAD7D0035BEEA /* LoginManager.h */,
 				D012CBF01BAFAD7D0035BEEA /* LoginManager.m */,
+				D0C5E62F1BCBA92100D338DF /* CommentService.swift */,
 			);
 			path = Net;
 			sourceTree = "<group>";
@@ -754,6 +757,7 @@
 				D012CBEE1BAFAC780035BEEA /* NetQuery+LDJ.m in Sources */,
 				D0B3DCF11BA2B3030056F0D9 /* BlogTableViewCell.m in Sources */,
 				D0D1D4A71BC61000006F5CC1 /* RegisterViewModel.swift in Sources */,
+				D0C5E6301BCBA92100D338DF /* CommentService.swift in Sources */,
 				D0404A331BABD4070072DF55 /* BlogService.m in Sources */,
 				D08A2F461BB134EE00B6F49F /* BlogPreviewViewController.m in Sources */,
 				D0A57A8E1BA9661300412A13 /* UserService.m in Sources */,

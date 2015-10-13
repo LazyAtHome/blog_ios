@@ -9,13 +9,23 @@
 import Foundation
 
 class RegisterViewModel: SceneModel {
+    var _request : RegisterRequest?
     override func loadSceneModel() {
         super.loadSceneModel()
+        
+        _request = RegisterRequest.RequestWithBlock({
+            self.SEND_IQ_ACTION(self._request)
+        }) as! RegisterRequest
+        
+        self._request!.rac_valuesForKeyPath("state",observer:self).filter( {
+            (state : AnyObject!) -> Bool in
+                var ret = false
+                ret = (self._request?.succeed())!
+                return ret
+        }).subscribeNext({
+            (state : AnyObject!) -> Void in
+                self._request!.output
+        })
+        self.SEND_ACTION(self._request)
     }
-    
-//    @weakify(self);
-//    _request = [FeedListRequest RequestWithBlock:^{  // 初始化请求回调
-//    @strongify(self)
-//    [self SEND_IQ_ACTION:self.request];
-//    }];
 }
